@@ -18,5 +18,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE selectOperatorsJSON TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectOperatorsJSON TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectOperatorsJSON TO 'manager'@'%';

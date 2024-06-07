@@ -6,7 +6,7 @@ CREATE FUNCTION `selectEnviroments_has_Standard`(idStandard int UNSIGNED)
 BEGIN
 
   DECLARE result json;
-  DECLARE elements tinyint(1);
+  DECLARE elements tinyint;
 
   SELECT
     COUNT(*) INTO elements
@@ -16,8 +16,8 @@ BEGIN
   IF (elements > 0) THEN
     SELECT
       JSON_ARRAYAGG(JSON_OBJECT('key', e.id,
-      'insertFluid', e.insertFluid,
-      'outsideFluid', e.outFluid)) INTO result
+      'insideFluid', e.inside,
+      'outsideFluid', e.outside)) INTO result
     FROM enviroment e
     WHERE e.standard = idStandard;
   ELSE

@@ -34,5 +34,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE insertOperator TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertOperator TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertOperator TO 'manager'@'%';

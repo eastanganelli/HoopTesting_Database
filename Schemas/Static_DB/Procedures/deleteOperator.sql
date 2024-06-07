@@ -22,5 +22,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE deleteOperator TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE deleteOperator TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE deleteOperator TO 'manager'@'%';

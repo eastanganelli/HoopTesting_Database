@@ -1,18 +1,18 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertRelatedMaterial`(IN idStandard int UNSIGNED, IN idMaterial int UNSIGNED)
+CREATE PROCEDURE `insertRelatedMaterial`(IN idStandard INT UNSIGNED, IN idMaterial INT UNSIGNED)
 BEGIN
 
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*)
+    COUNT(*) into elements
   FROM material_has_standard mhs
-  WHERE mhs.material = material
-  AND mhs.standard = standard;
+  WHERE mhs.material = idMaterial
+  AND mhs.standard = idStandard;
 
   IF elements = 0 THEN
-    INSERT HIGH_PRIORITY INTO material_has_standard (idMaterial, idStandard)
+    INSERT HIGH_PRIORITY INTO material_has_standard (material, standard)
       VALUES (idMaterial, idStandard);
 
     SELECT
@@ -23,7 +23,7 @@ BEGIN
       INNER JOIN material m
         ON mhs.material = m.id
     WHERE mhs.material = idMaterial
-    AND mhs.standard = standard;
+    AND mhs.standard = idStandard;
 
   ELSE
     SELECT
@@ -34,3 +34,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'manager'@'%';

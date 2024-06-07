@@ -11,7 +11,7 @@ BEGIN
   SELECT
     COUNT(*) INTO elements
   FROM material_has_standard mhs
-  WHERE mhs.standard = standard;
+  WHERE mhs.standard = idStandard;
 
   IF (elements > 0) THEN
     SELECT
@@ -21,7 +21,8 @@ BEGIN
       'descriptioin', m.description)) INTO result
     FROM material_has_standard mhs
       INNER JOIN material m
-    WHERE mhs.standard = standard;
+        ON m.id = mhs.standard
+    WHERE mhs.standard = idStandard;
   ELSE
     SELECT
       '[]' INTO result;

@@ -9,8 +9,8 @@
     <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Character Set=utf8mb4</PropertyValue>
   </ConnectionModel>
   <Database>stel_db_static</Database>
-  <OutputDirectory>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database\Testing Data\Static_Data</OutputDirectory>
-  <BaseFileName>stel_db_static</BaseFileName>
+  <OutputDirectory>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database\Testing Data\</OutputDirectory>
+  <BaseFileName>static_db</BaseFileName>
   <Mode>All</Mode>
   <AppendTimestamp>False</AppendTimestamp>
   <MaxDays>0</MaxDays>

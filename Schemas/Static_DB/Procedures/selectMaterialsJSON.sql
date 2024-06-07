@@ -16,5 +16,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'manager'@'%';

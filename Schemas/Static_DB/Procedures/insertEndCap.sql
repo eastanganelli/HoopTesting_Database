@@ -7,7 +7,7 @@ BEGIN
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*)
+    COUNT(*) into elements
   FROM endcap ec
   WHERE ec.name = endCap
   AND ec.name = endCap;
@@ -32,3 +32,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE insertEndCap TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertEndCap TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE insertEndCap TO 'manager'@'%';

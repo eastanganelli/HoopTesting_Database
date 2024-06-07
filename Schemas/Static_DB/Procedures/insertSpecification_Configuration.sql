@@ -37,5 +37,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'manager'@'%';

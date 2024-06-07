@@ -21,3 +21,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'manager'@'%';

@@ -21,3 +21,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE deleteEnviroment TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE deleteEnviroment TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE deleteEnviroment TO 'manager'@'%';

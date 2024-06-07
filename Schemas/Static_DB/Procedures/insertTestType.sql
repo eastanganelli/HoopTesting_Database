@@ -7,7 +7,7 @@ BEGIN
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*)
+    COUNT(*) into elements
   FROM test_type tt
   WHERE tt.standard = idStandard
   AND tt.testType = tesTypeIN;
@@ -32,3 +32,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE insertTestType TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertTestType TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE insertTestType TO 'manager'@'%';

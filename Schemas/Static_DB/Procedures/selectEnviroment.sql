@@ -6,8 +6,8 @@ BEGIN
 
   SELECT
     ehs.id,
-    ehs.insertFluid,
-    ehs.outFluid
+    ehs.inside,
+    ehs.outside
   FROM enviroment ehs
   WHERE ehs.standard = idStandard;
 
@@ -18,4 +18,3 @@ DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectEnviroment TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectEnviroment TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE selectEnviroment TO 'manager'@'%';

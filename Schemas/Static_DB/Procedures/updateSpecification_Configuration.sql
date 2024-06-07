@@ -28,5 +28,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE updateSpecification_Configuration TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE updateSpecification_Configuration TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE updateSpecification_Configuration TO 'manager'@'%';

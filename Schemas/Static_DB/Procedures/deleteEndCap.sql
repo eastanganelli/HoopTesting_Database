@@ -21,3 +21,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE deleteEndCap TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE deleteEndCap TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE deleteEndCap TO 'manager'@'%';

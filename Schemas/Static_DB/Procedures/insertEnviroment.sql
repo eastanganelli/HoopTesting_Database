@@ -1,30 +1,30 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertEnviroment`(IN idStandard INT UNSIGNED, IN insertFluid VARBINARY(15), IN outFluid VARBINARY(15))
+CREATE PROCEDURE `insertEnviroment`(IN idStandard INT UNSIGNED, IN insideFluid VARCHAR(30), IN outsideFluid VARCHAR(30))
   DETERMINISTIC
 BEGIN
 
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*)
+    COUNT(*) INTO elements
   FROM enviroment e
   WHERE e.standard = idStandard
-  AND e.insertFluid LIKE insertFluid
-  AND e.outFluid = outFluid;
+  AND e.inside LIKE insideFluid
+  AND e.outside LIKE outsideFluid;
 
   IF elements = 0 THEN
-    INSERT HIGH_PRIORITY INTO enviroment (standard, insertFluid, outFluid)
-      VALUES (idStandard, insertFluid, outFluid);
+    INSERT HIGH_PRIORITY INTO enviroment (standard, inside, outside)
+      VALUES (idStandard, insideFluid, outsideFluid);
 
     SELECT
       e.id AS `key`,
-      e.insertFluid AS `insertFluid`,
-      e.outFluid AS `outsideFluid`
+      e.inside AS `insideFluid`,
+      e.outside AS `outsideFluid`
     FROM enviroment e
     WHERE e.standard = idStandard
-    AND e.insertFluid LIKE insertFluid
-    AND e.outFluid = outFluid;
+    AND e.inside LIKE insideFluid
+    AND e.outside LIKE outsideFluid;
 
   ELSE
     SELECT
@@ -35,3 +35,6 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE insertEnviroment TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertEnviroment TO 'databaseManager'@'%';

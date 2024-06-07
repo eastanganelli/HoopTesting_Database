@@ -28,5 +28,6 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE updateOperator TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE updateOperator TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE updateOperator TO 'manager'@'%';

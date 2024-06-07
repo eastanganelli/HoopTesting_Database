@@ -7,7 +7,7 @@ BEGIN
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*)
+    COUNT(*) into elements
   FROM conditional_period cp
   WHERE cp.standard = idStandard
   AND cp.minwall = minwall
@@ -38,3 +38,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'manager'@'%';

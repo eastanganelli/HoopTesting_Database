@@ -14,8 +14,8 @@ BEGIN
       WHERE e.standard = s.id) AS `endCaps`,
     (SELECT
         JSON_ARRAYAGG(JSON_OBJECT('id', e.id,
-        'insertFluid', e.insertFluid,
-        'outsideFluid', e.outFluid))
+        'insertFluid', e.inside,
+        'outsideFluid', e.outside))
       FROM enviroment e
       WHERE e.standard = s.id) AS `enviroment`,
     (SELECT
@@ -43,3 +43,6 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE selectStandarsComplete TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE selectStandarsComplete TO 'databaseManager'@'%';

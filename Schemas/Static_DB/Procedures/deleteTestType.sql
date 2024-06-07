@@ -21,3 +21,7 @@ END
 $$
 
 DELIMITER ;
+
+GRANT EXECUTE ON PROCEDURE deleteTestType TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE deleteTestType TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE deleteTestType TO 'manager'@'%';
