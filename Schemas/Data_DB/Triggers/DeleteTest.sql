@@ -1,0 +1,16 @@
+﻿DELIMITER $$
+
+CREATE TRIGGER `DeleteTest`
+	BEFORE DELETE
+	ON specimen
+	FOR EACH ROW
+BEGIN
+
+DELETE LOW_PRIORITY QUICK
+  FROM data td
+  WHERE td.specimen = OLD.id;
+
+END
+$$
+
+DELIMITER ;

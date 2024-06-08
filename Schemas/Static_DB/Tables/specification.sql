@@ -1,0 +1,20 @@
+﻿CREATE TABLE `specification` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `material` INT UNSIGNED NOT NULL,
+  `name` VARCHAR(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `description` VARCHAR(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'Sin Descripción',
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AUTO_INCREMENT = 11,
+AVG_ROW_LENGTH = 16384,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+COMMENT = 'Specification of material',
+ROW_FORMAT = DYNAMIC;
+
+ALTER TABLE `specification` 
+  ADD CONSTRAINT `FK_specification_material_id` FOREIGN KEY (material)
+    REFERENCES material(id) ON UPDATE CASCADE;

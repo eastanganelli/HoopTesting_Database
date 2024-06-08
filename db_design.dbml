@@ -1,5 +1,0 @@
-Table  {
-    id int [pk, increment],
-    asd char [not null]
-
-}

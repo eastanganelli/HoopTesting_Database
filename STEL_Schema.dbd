@@ -7,8 +7,8 @@
   <Connection>
     <ConnectionModel>
       <PropertyValue Name="Database">59f90733-4d68-4fdf-82a7-f0fcbf5460aa</PropertyValue>
-      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Port=33060;Database=STEL_DB_DATA;Character Set=utf8</PropertyValue>
-      <PropertyValue Name="ExecutionTimeout">0</PropertyValue>
+      <PropertyValue Name="Id">13eaf70d-05ff-48bd-b7f8-c145be407132</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Character Set=utf8mb4</PropertyValue>
     </ConnectionModel>
   </Connection>
   <Settings>
@@ -18,17 +18,18 @@
     </DbDiagramOptions>
     <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
       <TopLeftMargins>
-        <Width>10 mm</Width>
-        <Height>10 mm</Height>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
       </TopLeftMargins>
       <BottomRightMargins>
-        <Width>10 mm</Width>
-        <Height>10 mm</Height>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
       </BottomRightMargins>
       <PaperSize>
-        <Width>210 mm</Width>
-        <Height>297 mm</Height>
+        <Width>1100 in/100</Width>
+        <Height>1700 in/100</Height>
       </PaperSize>
+      <IsLandscape>true</IsLandscape>
     </Options>
     <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
     <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ViewOptions">
@@ -36,325 +37,1114 @@
         <X>4 px</X>
         <Y>4 px</Y>
       </ShadowOffset>
-      <CustomProperties />
+      <CustomProperties>
+        <ShadowColor>100, 90, 90, 90</ShadowColor>
+      </CustomProperties>
     </Options>
   </Settings>
   <VirtualRelations>
     <RelationCount>0</RelationCount>
   </VirtualRelations>
-  <Diagram Version="1.30.60.0">
+  <Diagram Version="1.35.74.0">
     <DiagramModel>
       <Model xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DDRootModel">
         <CustomProperties>
           <OID>0</OID>
+          <BackgroundColor>37, 37, 38</BackgroundColor>
         </CustomProperties>
         <Children>
-          <Model xsi:type="TableModel">
+          <Model xsi:type="DDContainerModel">
             <CustomProperties>
               <OID>1</OID>
+              <BackgroundColor />
               <Parent>0</Parent>
             </CustomProperties>
-            <Location>
-              <X>570 px</X>
-              <Y>432 px</Y>
-            </Location>
-            <Size>
-              <Width>186 px</Width>
-              <Height>144 px</Height>
-            </Size>
-            <DbOid>
-              <Path>STEL_DB_DATA.operator</Path>
-              <TypeName>Table</TypeName>
-            </DbOid>
-            <Compartments>
-              <ConstraintsCollapsed>True</ConstraintsCollapsed>
-              <IndexesCollapsed>True</IndexesCollapsed>
-              <TriggersCollapsed>True</TriggersCollapsed>
-            </Compartments>
-          </Model>
-          <Model xsi:type="TableModel">
-            <CustomProperties>
-              <OID>2</OID>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <Location>
-              <X>40 px</X>
-              <Y>415 px</Y>
-            </Location>
-            <Size>
-              <Width>212 px</Width>
-              <Height>178 px</Height>
-            </Size>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_data</Path>
-              <TypeName>Table</TypeName>
-            </DbOid>
-            <Compartments>
-              <ConstraintsCollapsed>True</ConstraintsCollapsed>
-              <IndexesCollapsed>True</IndexesCollapsed>
-              <TriggersCollapsed>True</TriggersCollapsed>
-            </Compartments>
-          </Model>
-          <Model xsi:type="TableModel">
-            <CustomProperties>
-              <OID>3</OID>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <Location>
-              <X>309 px</X>
-              <Y>41 px</Y>
-            </Location>
-            <Size>
-              <Width>204 px</Width>
-              <Height>297 px</Height>
-            </Size>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_sample</Path>
-              <TypeName>Table</TypeName>
-            </DbOid>
-            <Compartments>
-              <ConstraintsCollapsed>True</ConstraintsCollapsed>
-              <IndexesCollapsed>True</IndexesCollapsed>
-              <TriggersCollapsed>True</TriggersCollapsed>
-            </Compartments>
-          </Model>
-          <Model xsi:type="TableModel">
-            <CustomProperties>
-              <OID>4</OID>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <Location>
-              <X>313 px</X>
-              <Y>398 px</Y>
-            </Location>
-            <Size>
-              <Width>195 px</Width>
-              <Height>212 px</Height>
-            </Size>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_specimen</Path>
-              <TypeName>Table</TypeName>
-            </DbOid>
-            <Compartments>
-              <ConstraintsCollapsed>True</ConstraintsCollapsed>
-              <IndexesCollapsed>True</IndexesCollapsed>
-              <TriggersCollapsed>True</TriggersCollapsed>
-            </Compartments>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>5</OID>
-              <Comment>6</Comment>
-              <OutModel>4</OutModel>
-              <InModel>1</InModel>
-              <OutPort>7</OutPort>
-              <InPort>8</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>2</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
                 <Location>
-                  <X>195 px</X>
-                  <Y>106.4 px</Y>
+                  <X>830 px</X>
+                  <Y>300 px</Y>
                 </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
+                <Size>
+                  <Width>224 px</Width>
+                  <Height>205 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.conditional_period</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>3</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>760 px</X>
+                  <Y>590 px</Y>
+                </Location>
+                <Size>
+                  <Width>220 px</Width>
+                  <Height>169 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.endcap</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>4</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>580 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Size>
+                  <Width>220 px</Width>
+                  <Height>187 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.enviroment</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>5</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>20 px</X>
+                  <Y>50 px</Y>
+                </Location>
+                <Size>
+                  <Width>223 px</Width>
+                  <Height>169 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.material</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>6</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>310 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Size>
+                  <Width>222 px</Width>
+                  <Height>187 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.material_has_standard</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
                 <CustomProperties>
                   <OID>7</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <Comment>8</Comment>
+                  <OutModel>6</OutModel>
+                  <InModel>5</InModel>
+                  <OutPort>9</OutPort>
+                  <InPort>10</InPort>
+                  <Parent>1</Parent>
                 </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>-0.799999999999955 px</X>
-                  <Y>72.4 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>94.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>9</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>84.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>10</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.material_has_standard.FK_material_has_standard_material_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
                 <CustomProperties>
                   <OID>8</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>7</HolderModel>
+                  <Port>11</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
                 </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_specimen.rela_specimen_operator</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>6</OID>
-              <HolderModel>5</HolderModel>
-              <Port>9</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>-31 px</X>
-                  <Y>6.10351560226263E-06 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>9</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>10</OID>
-              <Comment>11</Comment>
-              <OutModel>4</OutModel>
-              <InModel>3</InModel>
-              <OutPort>12</OutPort>
-              <InPort>13</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>97.8 px</X>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>33.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>11</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
                   <Y>2 px</Y>
-                </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Top</Align>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
                 <CustomProperties>
                   <OID>12</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <Parent>1</Parent>
                 </CustomProperties>
-              </Port>
-              <Port>
                 <Location>
-                  <X>101.8 px</X>
-                  <Y>297.8 px</Y>
+                  <X>830 px</X>
+                  <Y>40 px</Y>
                 </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Bottom</Align>
+                <Size>
+                  <Width>227 px</Width>
+                  <Height>165 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.operator</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
                 <CustomProperties>
                   <OID>13</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <Parent>1</Parent>
                 </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_specimen.rela_specimen_sample</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>11</OID>
-              <HolderModel>10</HolderModel>
-              <Port>14</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
                 <Location>
-                  <X>1.22070312613687E-05 px</X>
-                  <Y>30 px</Y>
+                  <X>20 px</X>
+                  <Y>310 px</Y>
                 </Location>
-                <Anchors>None</Anchors>
-                <Align>Top</Align>
+                <Size>
+                  <Width>223 px</Width>
+                  <Height>209 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.specification</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
                 <CustomProperties>
                   <OID>14</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <Comment>15</Comment>
+                  <OutModel>13</OutModel>
+                  <InModel>5</InModel>
+                  <OutPort>16</OutPort>
+                  <InPort>17</InPort>
+                  <Parent>1</Parent>
                 </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>15</OID>
-              <Comment>16</Comment>
-              <OutModel>2</OutModel>
-              <InModel>4</InModel>
-              <OutPort>17</OutPort>
-              <InPort>18</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>89 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>111.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>16</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>111.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>17</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.specification.FK_specification_material_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
                 <CustomProperties>
-                  <OID>17</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <OID>15</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>14</HolderModel>
+                  <Port>18</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
                 </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>106 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>18</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>STEL_DB_DATA.test_data.FK_test_data_test_specimen_id</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>16</OID>
-              <HolderModel>15</HolderModel>
-              <Port>19</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>-30.5 px</X>
-                  <Y>0 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>45.5 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>18</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
                 <CustomProperties>
                   <OID>19</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <Parent>1</Parent>
                 </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
+                <Location>
+                  <X>20 px</X>
+                  <Y>590 px</Y>
+                </Location>
+                <Size>
+                  <Width>231 px</Width>
+                  <Height>205 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.specification_configuration</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>20</OID>
+                  <Comment>21</Comment>
+                  <OutModel>19</OutModel>
+                  <InModel>13</InModel>
+                  <OutPort>22</OutPort>
+                  <InPort>23</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>111.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>22</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>111.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>23</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.specification_configuration.FK_specification_configuration_specification_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>21</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>20</HolderModel>
+                  <Port>24</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>35.5 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>24</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>25</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>300 px</X>
+                  <Y>360 px</Y>
+                </Location>
+                <Size>
+                  <Width>220 px</Width>
+                  <Height>129 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.standard</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>26</OID>
+                  <Comment>27</Comment>
+                  <OutModel>2</OutModel>
+                  <InModel>25</InModel>
+                  <OutPort>28</OutPort>
+                  <InPort>29</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>124.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>28</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>64.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>29</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.conditional_period.FK_conditional_period_standard_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>27</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>26</HolderModel>
+                  <Port>30</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>155 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>30</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>31</OID>
+                  <Comment>32</Comment>
+                  <OutModel>3</OutModel>
+                  <InModel>25</InModel>
+                  <OutPort>33</OutPort>
+                  <InPort>34</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>50.8432662293203 px</X>
+                      <Y>1.41531791464962 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>33</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>216.100356337403 px</X>
+                      <Y>94.9390288985477 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>34</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>810.84326171875 px</X>
+                    <Y>454.939025878906 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.endcap.FK_endcap_standard_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>32</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>31</HolderModel>
+                  <Port>35</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>145.421635369945 px</X>
+                      <Y>135.060974121094 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>35</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>36</OID>
+                  <Comment>37</Comment>
+                  <OutModel>4</OutModel>
+                  <InModel>25</InModel>
+                  <OutPort>38</OutPort>
+                  <InPort>39</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>211.512918051147 px</X>
+                      <Y>31.8617524625342 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>39</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>110 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>38</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <BendPoints>
+                  <PointD>
+                    <X>690 px</X>
+                    <Y>391.861755371094 px</Y>
+                  </PointD>
+                </BendPoints>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.enviroment.FK_enviroment_standard_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>37</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>36</HolderModel>
+                  <Port>40</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>85 px</X>
+                      <Y>-164.861755371094 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>40</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>41</OID>
+                  <Comment>42</Comment>
+                  <OutModel>6</OutModel>
+                  <InModel>25</InModel>
+                  <OutPort>43</OutPort>
+                  <InPort>44</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>157.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>43</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>167.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>44</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.material_has_standard.FK_material_has_standard_standard_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>42</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>41</HolderModel>
+                  <Port>45</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>-66.5 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>45</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>46</OID>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>460 px</X>
+                  <Y>590 px</Y>
+                </Location>
+                <Size>
+                  <Width>220 px</Width>
+                  <Height>169 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_static.test_type</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>47</OID>
+                  <Comment>48</Comment>
+                  <OutModel>46</OutModel>
+                  <InModel>25</InModel>
+                  <OutPort>49</OutPort>
+                  <InPort>50</InPort>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>30 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>49</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>190 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>50</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_static.test_type.FK_test_type_standard_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>48</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>47</HolderModel>
+                  <Port>51</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>1</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>50.5 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>51</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>-80 px</X>
+              <Y>-130 px</Y>
+            </Location>
+            <Size>
+              <Width>1090 px</Width>
+              <Height>890 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Static Schema</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
+          </Model>
+          <Model xsi:type="DDContainerModel">
+            <CustomProperties>
+              <OID>52</OID>
+              <BackgroundColor />
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Children>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>53</OID>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>370 px</X>
+                  <Y>280 px</Y>
+                </Location>
+                <Size>
+                  <Width>231 px</Width>
+                  <Height>169 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_data.data</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>54</OID>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>30 px</X>
+                  <Y>20 px</Y>
+                </Location>
+                <Size>
+                  <Width>243 px</Width>
+                  <Height>331 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_data.sample</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="TableModel">
+                <CustomProperties>
+                  <OID>55</OID>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <Location>
+                  <X>40 px</X>
+                  <Y>400 px</Y>
+                </Location>
+                <Size>
+                  <Width>225 px</Width>
+                  <Height>281 px</Height>
+                </Size>
+                <DbOid>
+                  <Path>stel_db_data.specimen</Path>
+                  <TypeName>Table</TypeName>
+                </DbOid>
+                <Compartments>
+                  <ConstraintsCollapsed>True</ConstraintsCollapsed>
+                  <IndexesCollapsed>True</IndexesCollapsed>
+                  <TriggersCollapsed>True</TriggersCollapsed>
+                </Compartments>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>56</OID>
+                  <Comment>57</Comment>
+                  <OutModel>55</OutModel>
+                  <InModel>54</InModel>
+                  <OutPort>58</OutPort>
+                  <InPort>59</InPort>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>112.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>58</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>122.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>Left Right</Anchors>
+                    <Align>Bottom</Align>
+                    <CustomProperties>
+                      <OID>59</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_data.specimen.FK_test_specimen_test_sample_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>57</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>56</HolderModel>
+                  <Port>60</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>0 px</X>
+                      <Y>24.5 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Top</Align>
+                    <CustomProperties>
+                      <OID>60</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+              <Model xsi:type="RelationLinkModel">
+                <CustomProperties>
+                  <OID>61</OID>
+                  <Comment>62</Comment>
+                  <OutModel>53</OutModel>
+                  <InModel>55</InModel>
+                  <OutPort>63</OutPort>
+                  <InPort>64</InPort>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>144.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>63</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                  <Port>
+                    <Location>
+                      <X>0 px</X>
+                      <Y>24.5 px</Y>
+                    </Location>
+                    <Anchors>Top Bottom</Anchors>
+                    <Align>Right</Align>
+                    <CustomProperties>
+                      <OID>64</OID>
+                      <PortType>FloatAnchor</PortType>
+                    </CustomProperties>
+                  </Port>
+                </PortAnchors>
+                <IsManuallyRouted>false</IsManuallyRouted>
+                <DbOid>
+                  <Path>stel_db_data.data.FK_test_data_test_specimen_id</Path>
+                  <TypeName>ForeignKey</TypeName>
+                </DbOid>
+              </Model>
+              <Model xsi:type="RelationCommentModel">
+                <CustomProperties>
+                  <OID>62</OID>
+                  <ForeColor>241, 241, 241</ForeColor>
+                  <HolderModel>61</HolderModel>
+                  <Port>65</Port>
+                  <Font>Tahoma, 9pt</Font>
+                  <Parent>52</Parent>
+                </CustomProperties>
+                <PortAnchors>
+                  <Port xsi:type="LinkPort">
+                    <Location>
+                      <X>52.5 px</X>
+                      <Y>0 px</Y>
+                    </Location>
+                    <Anchors>None</Anchors>
+                    <Align>Left</Align>
+                    <CustomProperties>
+                      <OID>65</OID>
+                      <PortType>FixedAnchor</PortType>
+                    </CustomProperties>
+                    <LinkPortAnchor>OutPoint</LinkPortAnchor>
+                  </Port>
+                </PortAnchors>
+                <CommentOffset>
+                  <X>22 px</X>
+                  <Y>2 px</Y>
+                </CommentOffset>
+              </Model>
+            </Children>
+            <Location>
+              <X>1030 px</X>
+              <Y>-130 px</Y>
+            </Location>
+            <Size>
+              <Width>640 px</Width>
+              <Height>890 px</Height>
+            </Size>
+            <IsCollapsed>false</IsCollapsed>
+            <Text>Data Schema</Text>
+            <ScrollState>
+              <ScrollOrigin>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollOrigin>
+              <ScrollPosition>
+                <X>0 px</X>
+                <Y>0 px</Y>
+              </ScrollPosition>
+            </ScrollState>
+            <Compartments>
+              <Opacity>100</Opacity>
+            </Compartments>
           </Model>
         </Children>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
-          <Scale>1</Scale>
+          <Scale>0.871946335</Scale>
           <Location>
-            <X>-437 px</X>
-            <Y>-75.5 px</Y>
+            <X>129.595131586719 px</X>
+            <Y>-113.539099022574 px</Y>
           </Location>
         </ViewPort>
       </Model>
