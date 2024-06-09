@@ -20,16 +20,16 @@
 --
 SET NAMES 'utf8mb4';
 
-DROP DATABASE IF EXISTS stel_db_static;
+DROP DATABASE IF EXISTS static_db;
 
-CREATE DATABASE IF NOT EXISTS stel_db_static
+CREATE DATABASE IF NOT EXISTS static_db
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_0900_ai_ci;
 
 --
 -- Set default database
 --
-USE stel_db_static;
+USE static_db;
 
 --
 -- Create table `material`
@@ -1913,85 +1913,85 @@ $$
 DELIMITER ;
 
 CREATE USER IF NOT EXISTS 'dataCollector'@'%' IDENTIFIED WITH mysql_native_password PASSWORD EXPIRE DEFAULT;
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteconditionalperiod TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteendcap TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteenviroment TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletematerial TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteoperator TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleterelatedmaterial TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification_configuration TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletestandard TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletetesttype TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertconditionalperiod TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertendcap TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertenviroment TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertmaterial TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertoperator TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertrelatedmaterial TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification_configuration TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertstandard TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.inserttesttype TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectconditionalperiods TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectendcaps TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectenviroment TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterials TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterialsjson TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperators TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperatorsjson TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectsettingsspecification TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectspecifications TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandards TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandardsjson TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandarscomplete TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selecttesttype TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatematerial TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updateoperator TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification_configuration TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatestandard TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteconditionalperiod TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteendcap TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteenviroment TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletematerial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteoperator TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleterelatedmaterial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification_configuration TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletestandard TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletetesttype TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertconditionalperiod TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertendcap TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertenviroment TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertmaterial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertoperator TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertrelatedmaterial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification_configuration TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertstandard TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.inserttesttype TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectconditionalperiods TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectendcaps TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectenviroment TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterials TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterialsjson TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperators TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperatorsjson TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectsettingsspecification TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectspecifications TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandards TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandardsjson TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandarscomplete TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selecttesttype TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatematerial TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updateoperator TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification_configuration TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatestandard TO 'dataCollector'@'%';
 
 CREATE USER IF NOT EXISTS 'databaseManager'@'%' IDENTIFIED WITH mysql_native_password PASSWORD EXPIRE NEVER;
-GRANT SELECT ON TABLE stel_db_static.material TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteconditionalperiod TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteendcap TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteenviroment TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletematerial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteoperator TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleterelatedmaterial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification_configuration TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletestandard TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletetesttype TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertconditionalperiod TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertendcap TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertenviroment TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertmaterial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertoperator TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertrelatedmaterial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification_configuration TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertstandard TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.inserttesttype TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectconditionalperiods TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectendcaps TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectenviroment TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterials TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterialsjson TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperators TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperatorsjson TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectsettingsspecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectspecifications TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandards TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandardsjson TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandarscomplete TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selecttesttype TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatematerial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updateoperator TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification_configuration TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatestandard TO 'databaseManager'@'%';
+GRANT SELECT ON TABLE static_db.material TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteconditionalperiod TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteendcap TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteenviroment TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletematerial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteoperator TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleterelatedmaterial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification_configuration TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletestandard TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletetesttype TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertconditionalperiod TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertendcap TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertenviroment TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertmaterial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertoperator TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertrelatedmaterial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification_configuration TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertstandard TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.inserttesttype TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectconditionalperiods TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectendcaps TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectenviroment TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterials TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterialsjson TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperators TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperatorsjson TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectsettingsspecification TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectspecifications TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandards TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandardsjson TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandarscomplete TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selecttesttype TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatematerial TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updateoperator TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification_configuration TO 'databaseManager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatestandard TO 'databaseManager'@'%';
 
 CREATE USER IF NOT EXISTS 'mysql.infoschema'@'localhost' IDENTIFIED WITH caching_sha2_password PASSWORD EXPIRE DEFAULT ACCOUNT LOCK;
 GRANT SELECT, AUDIT_ABORT_EXEMPT, FIREWALL_EXEMPT, SYSTEM_USER ON *.* TO 'mysql.infoschema'@'localhost';
@@ -2020,40 +2020,40 @@ WITH GRANT OPTION;
 GRANT ALLOW_NONEXISTENT_DEFINER, ALTER, ALTER ROUTINE, APPLICATION_PASSWORD_ADMIN, AUDIT_ABORT_EXEMPT, AUDIT_ADMIN, AUTHENTICATION_POLICY_ADMIN, BACKUP_ADMIN, BINLOG_ADMIN, BINLOG_ENCRYPTION_ADMIN, CLONE_ADMIN, CONNECTION_ADMIN, CREATE, CREATE ROLE, CREATE ROUTINE, CREATE TABLESPACE, CREATE TEMPORARY TABLES, CREATE USER, CREATE VIEW, DELETE, DROP, DROP ROLE, ENCRYPTION_KEY_ADMIN, EVENT, EXECUTE, FILE, FIREWALL_EXEMPT, FLUSH_OPTIMIZER_COSTS, FLUSH_STATUS, FLUSH_TABLES, FLUSH_USER_RESOURCES, GROUP_REPLICATION_ADMIN, GROUP_REPLICATION_STREAM, INDEX, INNODB_REDO_LOG_ARCHIVE, INNODB_REDO_LOG_ENABLE, INSERT, LOCK TABLES, PASSWORDLESS_USER_ADMIN, PERSIST_RO_VARIABLES_ADMIN, PROCESS, REFERENCES, RELOAD, REPLICATION CLIENT, REPLICATION SLAVE, REPLICATION_APPLIER, REPLICATION_SLAVE_ADMIN, RESOURCE_GROUP_ADMIN, RESOURCE_GROUP_USER, ROLE_ADMIN, SELECT, SENSITIVE_VARIABLES_OBSERVER, SERVICE_CONNECTION_ADMIN, SESSION_VARIABLES_ADMIN, SET_ANY_DEFINER, SHOW DATABASES, SHOW VIEW, SHOW_ROUTINE, SHUTDOWN, SUPER, SYSTEM_USER, SYSTEM_VARIABLES_ADMIN, TABLE_ENCRYPTION_ADMIN, TELEMETRY_LOG_ADMIN, TRANSACTION_GTID_TAG, TRIGGER, UPDATE, XA_RECOVER_ADMIN ON *.* TO 'root'@'localhost';
 
 CREATE ROLE IF NOT EXISTS 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteconditionalperiod TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteendcap TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteenviroment TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletematerial TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleteoperator TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deleterelatedmaterial TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletespecification_configuration TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletestandard TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.deletetesttype TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertconditionalperiod TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertendcap TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertmaterial TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertoperator TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertrelatedmaterial TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertspecification_configuration TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.insertstandard TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.inserttesttype TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectconditionalperiods TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectendcaps TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterials TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectmaterialsjson TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperators TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectoperatorsjson TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectsettingsspecification TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectspecifications TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandards TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selectstandardsjson TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.selecttesttype TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatematerial TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updateoperator TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification TO 'manager'@'%';
-GRANT EXECUTE ON PROCEDURE stel_db_static.updatespecification_configuration TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteconditionalperiod TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteendcap TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteenviroment TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletematerial TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleteoperator TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deleterelatedmaterial TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletespecification_configuration TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletestandard TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.deletetesttype TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertconditionalperiod TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertendcap TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertmaterial TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertoperator TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertrelatedmaterial TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertspecification_configuration TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.insertstandard TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.inserttesttype TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectconditionalperiods TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectendcaps TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterials TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectmaterialsjson TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperators TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectoperatorsjson TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectsettingsspecification TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectspecifications TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandards TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selectstandardsjson TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.selecttesttype TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatematerial TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updateoperator TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification TO 'manager'@'%';
+GRANT EXECUTE ON PROCEDURE static_db.updatespecification_configuration TO 'manager'@'%';
 
 CREATE ROLE IF NOT EXISTS 'reporting'@'%';
 GRANT EXECUTE ON PROCEDURE stel_db_data.countspecimens TO 'reporting'@'%';
@@ -2163,7 +2163,7 @@ INSERT INTO conditional_period(id, standard, time, minwall, maxwall, createdAt, 
 --
 -- Set default database
 --
-USE stel_db_static;
+USE static_db;
 
 DELIMITER $$
 
