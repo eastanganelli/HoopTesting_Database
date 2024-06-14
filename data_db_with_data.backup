@@ -8,7 +8,7 @@
     <PropertyValue Name="Id">13eaf70d-05ff-48bd-b7f8-c145be407132</PropertyValue>
     <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Character Set=utf8mb4</PropertyValue>
   </ConnectionModel>
-  <Database>stel_db_data</Database>
+  <Database>data_db</Database>
   <OutputDirectory>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database\Testing Data</OutputDirectory>
   <BaseFileName>data_db</BaseFileName>
   <Mode>All</Mode>
