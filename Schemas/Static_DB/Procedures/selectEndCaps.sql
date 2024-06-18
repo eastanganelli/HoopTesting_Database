@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `selectEndCaps`(IN idStandard INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `selectEndCaps`(IN idStandard int UNSIGNED)
 BEGIN
 
   SELECT

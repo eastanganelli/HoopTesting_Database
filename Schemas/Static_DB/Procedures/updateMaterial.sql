@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `updateMaterial`(IN id int UNSIGNED, IN nameIN varchar(20), IN descriptionIN varchar(80))
   DETERMINISTIC
 BEGIN
@@ -28,6 +32,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE updateMaterial TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE updateMaterial TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE updateMaterial TO 'manager'@'%';

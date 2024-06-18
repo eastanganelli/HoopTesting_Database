@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `insertEndCap`(IN idStandard int UNSIGNED, IN endCap varbinary(15))
   DETERMINISTIC
 BEGIN
@@ -7,7 +11,7 @@ BEGIN
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*) into elements
+    COUNT(*) INTO elements
   FROM endcap ec
   WHERE ec.name = endCap
   AND ec.name = endCap;
@@ -33,6 +37,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertEndCap TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertEndCap TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertEndCap TO 'manager'@'%';

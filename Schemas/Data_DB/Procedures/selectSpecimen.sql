@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `selectSpecimen`(IN idSpecimen INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `selectSpecimen`(IN idSpecimen int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
@@ -19,5 +23,4 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'reporting'@'%';

@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE FUNCTION `selectTestData`(idSpecimen INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE FUNCTION `selectTestData`(idSpecimen int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC
 BEGIN

@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE FUNCTION `selectSpecification_Configurations`(idSpecification INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE FUNCTION `selectSpecification_Configurations`(idSpecification int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC
 BEGIN

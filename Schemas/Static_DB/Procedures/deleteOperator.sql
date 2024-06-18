@@ -1,15 +1,19 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `deleteOperator`(IN id INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `deleteOperator`(IN id int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
-  IF(existOperator(id) = TRUE) THEN
+  IF (existOperator(id) = TRUE) THEN
     DELETE LOW_PRIORITY QUICK
       FROM operator o
-      WHERE o.id = id
-      LIMIT 1;
-    
+    WHERE o.id = id
+    LIMIT 1;
+
     SELECT
       'Successful Deleted!' AS `response`;
   ELSE
@@ -22,6 +26,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE deleteOperator TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE deleteOperator TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE deleteOperator TO 'manager'@'%';

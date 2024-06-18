@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE FUNCTION `specimenExists`(idSample INT UNSIGNED, start VARBINARY(255))
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE FUNCTION `specimenExists`(idSample int UNSIGNED, start varbinary(255))
   RETURNS INT(11) UNSIGNED
   DETERMINISTIC
 BEGIN

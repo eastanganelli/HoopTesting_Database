@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `selectTestData`(IN idSpecimen INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `selectTestData`(IN idSpecimen int UNSIGNED)
   DETERMINISTIC
 BEGIN
 

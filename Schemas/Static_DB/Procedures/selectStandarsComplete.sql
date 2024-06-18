@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `selectStandarsComplete`()
   DETERMINISTIC
 BEGIN
@@ -25,18 +29,15 @@ BEGIN
         'time', cp.time))
       FROM conditional_period cp
       WHERE cp.standard = s.id) AS conditionalPeriod,
-      (
-        SELECT
-          JSON_ARRAYAGG(JSON_OBJECT(
-            'id', mhs.id,
-            'idMaterial', mhs.material,
-            'material', m.name,
-            'description', m.description
-          ))
-        FROM material_has_standard mhs
-        INNER JOIN material m ON mhs.material = m.id
-        WHERE mhs.standard = s.id
-      ) AS relatedMaterial
+    (SELECT
+        JSON_ARRAYAGG(JSON_OBJECT('id', mhs.id,
+        'idMaterial', mhs.material,
+        'material', m.name,
+        'description', m.description))
+      FROM material_has_standard mhs
+        INNER JOIN material m
+          ON mhs.material = m.id
+      WHERE mhs.standard = s.id) AS relatedMaterial
   FROM standard s;
 
 END

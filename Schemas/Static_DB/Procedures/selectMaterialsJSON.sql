@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `selectMaterialsJSON`()
   DETERMINISTIC
 BEGIN
@@ -16,6 +20,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectMaterialsJSON TO 'manager'@'%';

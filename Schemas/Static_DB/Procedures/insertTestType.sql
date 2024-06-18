@@ -1,27 +1,31 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertTestType`(IN idStandard int UNSIGNED, IN tesTypeIN varbinary(255))
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `insertTestType`(IN idStandard INT UNSIGNED, IN testTypeIN VARBINARY(255))
   DETERMINISTIC
 BEGIN
 
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*) into elements
+    COUNT(*) INTO elements
   FROM test_type tt
   WHERE tt.standard = idStandard
-  AND tt.testType = tesTypeIN;
+  AND tt.testType = testTypeIN;
 
   IF elements = 0 THEN
     INSERT HIGH_PRIORITY INTO test_type (standard, testType)
-      VALUES (idStandard, tesTypeIN);
+      VALUES (idStandard, testTypeIN);
 
     SELECT
       tt.id AS `key`,
       tt.testType AS `testtype`
     FROM test_type tt
     WHERE tt.standard = idStandard
-    AND tt.testType = tesTypeIN;
+    AND tt.testType = testTypeIN;
 
   ELSE
     SELECT
@@ -33,6 +37,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertTestType TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertTestType TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertTestType TO 'manager'@'%';

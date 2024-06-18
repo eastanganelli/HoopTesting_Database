@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE FUNCTION `selectTestNumber`(idSpecimen int UNSIGNED)
   RETURNS INT(11) UNSIGNED
   DETERMINISTIC

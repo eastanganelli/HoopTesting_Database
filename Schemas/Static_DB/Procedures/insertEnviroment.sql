@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertEnviroment`(IN idStandard INT UNSIGNED, IN insideFluid VARCHAR(30), IN outsideFluid VARCHAR(30))
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `insertEnviroment`(IN idStandard int UNSIGNED, IN insideFluid varchar(30), IN outsideFluid varchar(30))
   DETERMINISTIC
 BEGIN
 
@@ -36,5 +40,4 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertEnviroment TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertEnviroment TO 'databaseManager'@'%';

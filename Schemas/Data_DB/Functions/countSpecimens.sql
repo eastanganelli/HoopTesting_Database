@@ -4,12 +4,12 @@ SET @saved_sql_mode = @@sql_mode
 $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE FUNCTION `countSpecimens`(idSpecimen INT UNSIGNED)
+CREATE FUNCTION `countSpecimens`(idSpecimen int UNSIGNED)
   RETURNS INT(11) UNSIGNED
   DETERMINISTIC
 BEGIN
 
-  set @count = 0;
+  SET @count = 0;
 
   SELECT
     COUNT(*) INTO @count

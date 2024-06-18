@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Documenter document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<SerializationModel Version="1.1">
+  <Servers>
+    <ConnectionModel Name="Local_Development">
+      <PropertyValue Name="Database">59f90733-4d68-4fdf-82a7-f0fcbf5460aa</PropertyValue>
+      <PropertyValue Name="Id">13eaf70d-05ff-48bd-b7f8-c145be407132</PropertyValue>
+      <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Character Set=utf8mb4</PropertyValue>
+    </ConnectionModel>
+  </Servers>
+  <Settings>
+    <Autor>Ezequiel Augusto Stanganelli</Autor>
+    <Copyright>Copyright © All Rights Reserved</Copyright>
+    <CreatedDateFormat>dd/MM/yyyy</CreatedDateFormat>
+    <Description>Documentation of the Database for the Hoop Testing System</Description>
+    <EnableBreadcrumbs>true</EnableBreadcrumbs>
+    <Header>Hoop Testing</Header>
+    <Title>Hoop Testing - Database Documentation</Title>
+    <TitleImage>D:\ezequ\Projects\HoopTesting_System\sources\icons\System\HoopTesting_System.png</TitleImage>
+    <Style>bootstrap/Default Dark.css</Style>
+    <FileFormat>Markdown</FileFormat>
+    <OpenAfterGeneration>false</OpenAfterGeneration>
+    <AppendTimestamp>false</AppendTimestamp>
+    <Path>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database</Path>
+    <Output>Documentation</Output>
+  </Settings>
+  <IncludedSection>
+    <Section Uid="Root[Project].CoverPage[CoverPage]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[data_db]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[data_db].Properties[Collation]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[static_db]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[SqlScript]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[SqlScript]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[AuthenticationString]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[Authentication]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxConnections]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxQueries]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxUpdates]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxUserConnections]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[SqlScript]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[SqlScript]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[BaseDirectory]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[Hostname]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[Port]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[VersionCompileMachine]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[VersionCompileOs]" Included="false" />
+  </IncludedSection>
+</SerializationModel>

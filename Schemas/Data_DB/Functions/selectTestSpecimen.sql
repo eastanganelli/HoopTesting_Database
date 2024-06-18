@@ -4,11 +4,11 @@ SET @saved_sql_mode = @@sql_mode
 $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE FUNCTION `selectTestSpecimen`(idSpecimen INT UNSIGNED)
+CREATE FUNCTION `selectTestSpecimen`(idSpecimen int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC
 BEGIN
-  
+
   SET @result = NULL;
 
   SET @countSpecimens = countSpecimens(idSpecimen);
@@ -51,7 +51,7 @@ BEGIN
   FROM specimen se
   WHERE se.id = idSpecimen;
 
-RETURN @result;
+  RETURN @result;
 END
 $$
 

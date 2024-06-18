@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE FUNCTION `selectMaterials_has_Standard`(idStandard int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC

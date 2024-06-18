@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `deleteRelatedMaterial`(IN id int UNSIGNED)
   DETERMINISTIC
 BEGIN
@@ -22,6 +26,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'manager'@'%';

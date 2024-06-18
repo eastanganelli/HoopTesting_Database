@@ -12,18 +12,19 @@ BEGIN
   BEGIN
 
     GET DIAGNOSTICS CONDITION 1 @sqlstate = RETURNED_SQLSTATE, @message = MESSAGE_TEXT;
-    SELECT @message AS `idSample`;
+    SELECT
+      @message AS `idSample`;
 
   END;
-    
-    INSERT INTO sample (standard, condPeriod, material, specification, targettemp, targetpressure, diamreal, diamnom, wallthick, lenfree, lentotal)
-      VALUES (standard, condPeriod, material, specification, targettemp, targetpressure, diamreal, diamnom, wallthick, lenfree, lentotal);
 
-    SELECT
-      ts.id AS `idSample`
-    FROM sample ts
-    ORDER BY ts.id DESC
-    LIMIT 1;
+  INSERT INTO sample (standard, condPeriod, material, specification, targettemp, targetpressure, diamreal, diamnom, wallthick, lenfree, lentotal)
+    VALUES (standard, condPeriod, material, specification, targettemp, targetpressure, diamreal, diamnom, wallthick, lenfree, lentotal);
+
+  SELECT
+    ts.id AS `idSample`
+  FROM sample ts
+  ORDER BY ts.id DESC
+  LIMIT 1;
 
 END
 $$

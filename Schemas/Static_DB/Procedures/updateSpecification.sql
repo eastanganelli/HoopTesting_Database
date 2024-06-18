@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `updateSpecification`(IN id int UNSIGNED, IN nameIN varchar(20), IN descriptionIN varchar(80))
   DETERMINISTIC
 BEGIN
@@ -27,6 +31,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE updateSpecification TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE updateSpecification TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE updateSpecification TO 'manager'@'%';

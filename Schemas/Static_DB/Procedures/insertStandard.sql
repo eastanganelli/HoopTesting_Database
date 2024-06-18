@@ -2,7 +2,7 @@
 
 SET @saved_sql_mode = @@sql_mode
 $$
-SET @@sql_mode = 'ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
 CREATE PROCEDURE `insertStandard`(IN nameIn varchar(40))
   DETERMINISTIC
@@ -11,7 +11,7 @@ BEGIN
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*) into elements
+    COUNT(*) INTO elements
   FROM standard s
   WHERE s.name = nameIn;
 
@@ -39,6 +39,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertStandard TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertStandard TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertStandard TO 'manager'@'%';

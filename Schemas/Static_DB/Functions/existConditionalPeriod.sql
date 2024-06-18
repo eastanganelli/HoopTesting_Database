@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE FUNCTION `existConditionalPeriod`(id int UNSIGNED)
   RETURNS TINYINT(1)
   DETERMINISTIC

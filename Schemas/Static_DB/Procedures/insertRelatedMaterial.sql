@@ -1,12 +1,16 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertRelatedMaterial`(IN idStandard INT UNSIGNED, IN idMaterial INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `insertRelatedMaterial`(IN idStandard int UNSIGNED, IN idMaterial int UNSIGNED)
 BEGIN
 
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*) into elements
+    COUNT(*) INTO elements
   FROM material_has_standard mhs
   WHERE mhs.material = idMaterial
   AND mhs.standard = idStandard;
@@ -35,6 +39,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertRelatedMaterial TO 'manager'@'%';

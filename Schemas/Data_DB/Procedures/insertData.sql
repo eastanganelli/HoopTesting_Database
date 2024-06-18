@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertData`(IN idSpecimen INT UNSIGNED, IN pressure DOUBLE, IN temperature DOUBLE)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `insertData`(IN idSpecimen int UNSIGNED, IN pressure double, IN temperature double)
 BEGIN
 
   INSERT INTO data (specimen, pressure, temperature, createdAt)

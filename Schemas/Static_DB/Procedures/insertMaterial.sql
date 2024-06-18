@@ -2,7 +2,7 @@
 
 SET @saved_sql_mode = @@sql_mode
 $$
-SET @@sql_mode = 'ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
 CREATE PROCEDURE `insertMaterial`(IN nameIN varchar(20), IN descriptionIN varchar(60))
   DETERMINISTIC
@@ -38,6 +38,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertMaterial TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertMaterial TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertMaterial TO 'manager'@'%';

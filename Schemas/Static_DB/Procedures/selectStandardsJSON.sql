@@ -2,7 +2,7 @@
 
 SET @saved_sql_mode = @@sql_mode
 $$
-SET @@sql_mode = 'ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
 CREATE PROCEDURE `selectStandardsJSON`()
   DETERMINISTIC
@@ -14,7 +14,8 @@ BEGIN
     'materials', (selectMaterials_has_Standard(s.id)),
     'enviroments', (selectEnviroments_has_Standard(s.id)),
     'endCaps', (selectEndCaps_has_Standard(s.id)),
-    'conditionalPeriods', (selectConditionalPeriods_has_Standard(s.id))
+    'conditionalPeriods', (selectConditionalPeriods_has_Standard(s.id)),
+    'testTypes', (selectTest_Type(s.id))
     )) AS `standards`
   FROM standard s;
 
@@ -23,6 +24,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE selectStandardsJSON TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectStandardsJSON TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectStandardsJSON TO 'manager'@'%';

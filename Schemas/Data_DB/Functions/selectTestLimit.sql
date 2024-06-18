@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE FUNCTION `selectTestLimit`(idSpecimen INT UNSIGNED, isASC TINYINT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE FUNCTION `selectTestLimit`(idSpecimen int UNSIGNED, isASC tinyint UNSIGNED)
   RETURNS DATETIME
   DETERMINISTIC
 BEGIN
@@ -21,7 +25,7 @@ BEGIN
     ORDER BY td.createdAt DESC LIMIT 1;
   END IF;
 
-RETURN @Time;
+  RETURN @Time;
 END
 $$
 

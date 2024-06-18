@@ -1,5 +1,9 @@
 ﻿DELIMITER $$
 
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
 CREATE PROCEDURE `insertSpecification_Configuration`(IN specificationIN int UNSIGNED, IN timeIN smallint, IN timeTypeIN varchar(1), IN temperatureIN tinyint)
   DETERMINISTIC
 BEGIN
@@ -37,6 +41,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertSpecification_Configuration TO 'manager'@'%';

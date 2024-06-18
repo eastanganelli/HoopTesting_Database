@@ -4,7 +4,7 @@ SET @saved_sql_mode = @@sql_mode
 $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE PROCEDURE `updateSpecimen`(IN idSpecimen INT UNSIGNED, IN testName VARCHAR(150), IN operator VARCHAR(40), IN fail VARCHAR(255), IN remark VARCHAR(255))
+CREATE PROCEDURE `updateSpecimen`(IN idSpecimen int UNSIGNED, IN testName varchar(150), IN operator varchar(40), IN fail varchar(255), IN remark varchar(255))
 BEGIN
 
   UPDATE LOW_PRIORITY specimen ts

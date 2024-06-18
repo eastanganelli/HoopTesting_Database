@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE FUNCTION `existSpecification`(id INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE FUNCTION `existSpecification`(id int UNSIGNED)
   RETURNS TINYINT(1)
   DETERMINISTIC
 BEGIN

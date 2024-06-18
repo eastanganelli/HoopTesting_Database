@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `selectSample`(IN idSample INT UNSIGNED)
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `selectSample`(IN idSample int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
@@ -17,7 +21,7 @@ BEGIN
     s.condPeriod AS `condPeriod`,
     s.targettemp AS `targettemp`,
     s.targetpressure AS `targetpressure`
-    FROM sample s
+  FROM sample s
   WHERE s.id = idSample;
 
 END
@@ -25,5 +29,4 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE selectSample TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectSample TO 'reporting'@'%';

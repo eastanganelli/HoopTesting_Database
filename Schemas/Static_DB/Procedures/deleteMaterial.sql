@@ -2,18 +2,18 @@
 
 SET @saved_sql_mode = @@sql_mode
 $$
-SET @@sql_mode = 'ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE PROCEDURE `deleteMaterial`(IN id INT UNSIGNED)
+CREATE PROCEDURE `deleteMaterial`(IN id int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
-  IF(existMaterial(id) = TRUE) THEN
+  IF (existMaterial(id) = TRUE) THEN
     DELETE LOW_PRIORITY QUICK
       FROM material m
-      WHERE m.id = id
-      LIMIT 1;
-    
+    WHERE m.id = id
+    LIMIT 1;
+
     SELECT
       'Successful Deleted!' AS `response`;
   ELSE
@@ -26,6 +26,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE deleteMaterial TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE deleteMaterial TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE deleteMaterial TO 'manager'@'%';

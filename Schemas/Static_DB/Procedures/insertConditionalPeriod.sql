@@ -1,13 +1,17 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `insertConditionalPeriod`(IN idStandard INT UNSIGNED, IN minwall INT, IN maxwall INT, IN time VARCHAR(20))
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `insertConditionalPeriod`(IN idStandard int UNSIGNED, IN minwall int, IN maxwall int, IN time varchar(20))
   DETERMINISTIC
 BEGIN
 
   DECLARE elements int UNSIGNED;
 
   SELECT
-    COUNT(*) into elements
+    COUNT(*) INTO elements
   FROM conditional_period cp
   WHERE cp.standard = idStandard
   AND cp.minwall = minwall
@@ -39,6 +43,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'manager'@'%';

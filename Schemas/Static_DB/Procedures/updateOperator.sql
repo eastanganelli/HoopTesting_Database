@@ -1,6 +1,10 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `updateOperator`(IN id INT UNSIGNED, IN dni INT UNSIGNED, IN name VARCHAR(50), IN familyname VARCHAR(50))
+SET @saved_sql_mode = @@sql_mode
+$$
+SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
+$$
+CREATE PROCEDURE `updateOperator`(IN id int UNSIGNED, IN dni int UNSIGNED, IN name varchar(50), IN familyname varchar(50))
   DETERMINISTIC
 BEGIN
 
@@ -28,6 +32,5 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE updateOperator TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE updateOperator TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE updateOperator TO 'manager'@'%';
