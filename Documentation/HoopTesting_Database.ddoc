@@ -19,7 +19,17 @@
     <Title>Hoop Testing - Database Documentation</Title>
     <TitleImage>D:\ezequ\Projects\HoopTesting_System\sources\icons\System\HoopTesting_System.png</TitleImage>
     <Style>bootstrap/Default Dark.css</Style>
-    <FileFormat>Markdown</FileFormat>
+    <FileFormat>Pdf</FileFormat>
+    <FormatOptions d3p1:type="PdfOptionsSerializationModel" xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance">
+      <PaperKind>A4</PaperKind>
+      <PaperSize>
+        <Width>595.2756</Width>
+        <Height>841.8898</Height>
+      </PaperSize>
+      <Landscape>false</Landscape>
+      <FontScale>100</FontScale>
+      <PageNumbering>false</PageNumbering>
+    </FormatOptions>
     <OpenAfterGeneration>false</OpenAfterGeneration>
     <AppendTimestamp>false</AppendTimestamp>
     <Path>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database</Path>
