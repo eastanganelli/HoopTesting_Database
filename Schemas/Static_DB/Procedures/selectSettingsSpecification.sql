@@ -21,5 +21,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSettingsSpecification TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectSettingsSpecification TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectSettingsSpecification TO 'manager'@'%';

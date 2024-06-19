@@ -21,5 +21,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectOperators TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectOperators TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectOperators TO 'manager'@'%';

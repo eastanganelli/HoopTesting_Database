@@ -21,4 +21,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectEnviroment TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectEnviroment TO 'databaseManager'@'%';

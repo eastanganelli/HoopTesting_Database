@@ -19,5 +19,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectStandards TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectStandards TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectStandards TO 'manager'@'%';

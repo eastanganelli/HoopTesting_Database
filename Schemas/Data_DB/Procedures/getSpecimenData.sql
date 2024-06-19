@@ -37,5 +37,4 @@ $$
 
 DELIMITER ;
 
-GRANT EXECUTE ON PROCEDURE getSpecimenData TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE getSpecimenData TO 'reporting'@'%';

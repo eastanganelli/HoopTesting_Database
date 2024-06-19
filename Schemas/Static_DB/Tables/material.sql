@@ -13,3 +13,5 @@ CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 COMMENT = 'Material of Hoop',
 ROW_FORMAT = DYNAMIC;
+
+GRANT SELECT ON TABLE material TO 'databaseManager'@'%';

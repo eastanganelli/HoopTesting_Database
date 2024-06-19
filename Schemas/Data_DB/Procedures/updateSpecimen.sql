@@ -20,4 +20,5 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE updateSpecimen TO 'reportGenerator'@'%';
 GRANT EXECUTE ON PROCEDURE updateSpecimen TO 'reporting'@'%';

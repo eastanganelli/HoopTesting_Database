@@ -23,4 +23,5 @@ $$
 
 DELIMITER ;
 
+GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'reporting'@'%';

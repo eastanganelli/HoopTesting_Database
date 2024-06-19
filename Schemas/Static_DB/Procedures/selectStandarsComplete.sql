@@ -44,6 +44,3 @@ END
 $$
 
 DELIMITER ;
-
-GRANT EXECUTE ON PROCEDURE selectStandarsComplete TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectStandarsComplete TO 'databaseManager'@'%';

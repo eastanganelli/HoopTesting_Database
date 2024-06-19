@@ -19,5 +19,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectEndCaps TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectEndCaps TO 'databaseManager'@'%';
 GRANT EXECUTE ON PROCEDURE selectEndCaps TO 'manager'@'%';
