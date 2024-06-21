@@ -1,0 +1,2 @@
+chcp 65001
+"C:\Program Files\Devart\dbForge Studio for MySQL\dbforgemysql.com" /dataexport /connection:"User Id=root;Host=localhost;Character Set=utf8mb4" /table "static_db.conditional_period" "static_db.endcap" "static_db.enviroment" "static_db.material" "static_db.material_has_standard" "static_db.operator" "static_db.specification" "static_db.specification_configuration" "static_db.standard" "static_db.test_type" /outputfile:"D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database\Tested_Data\STATIC_DB_data.sql" /singlefile /errormode:abort

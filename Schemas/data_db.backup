@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), export template file-->
+<!-- Modifying this generated file will probably render it invalid -->
+<ExportTemplate FormatVersion="1">
+  <LastSuccessfullDate>0001-01-01T00:00:00</LastSuccessfullDate>
+  <ConnectionModel>
+    <PropertyValue Name="Database">59f90733-4d68-4fdf-82a7-f0fcbf5460aa</PropertyValue>
+    <PropertyValue Name="Id">13eaf70d-05ff-48bd-b7f8-c145be407132</PropertyValue>
+    <PropertyValue Name="ConnectionString" xml:space="preserve">User Id=root;Host=localhost;Character Set=utf8mb4</PropertyValue>
+  </ConnectionModel>
+  <Database>data_db</Database>
+  <OutputDirectory>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database\Schemas</OutputDirectory>
+  <BaseFileName>data_db</BaseFileName>
+  <Mode>All</Mode>
+  <AppendTimestamp>False</AppendTimestamp>
+  <MaxDays>0</MaxDays>
+  <MaxFilesCount>0</MaxFilesCount>
+  <Compression />
+  <DatabaseObjects />
+  <Options>
+    <PropertyValue Name="FlushLogs">false</PropertyValue>
+    <PropertyValue Name="SingleTransaction">false</PropertyValue>
+    <PropertyValue Name="LockAllTablesForRead">false</PropertyValue>
+    <PropertyValue Name="FormatDdlText">true</PropertyValue>
+    <PropertyValue Name="GenerateComments">true</PropertyValue>
+    <PropertyValue Name="IncludeCreateDatabase">true</PropertyValue>
+    <PropertyValue Name="ScriptCreateDatabase">true</PropertyValue>
+    <PropertyValue Name="IncludeDrop">true</PropertyValue>
+    <PropertyValue Name="IncludeIfExists">true</PropertyValue>
+    <PropertyValue Name="IncludeIfNotExists">true</PropertyValue>
+    <PropertyValue Name="IncludeNoAutoValueOnZero">true</PropertyValue>
+    <PropertyValue Name="IncludeUseDatabase">true</PropertyValue>
+    <PropertyValue Name="IncludeDefiner">true</PropertyValue>
+    <PropertyValue Name="IncludeSqlSecurity">true</PropertyValue>
+    <PropertyValue Name="UseSchemaNamePrefix">false</PropertyValue>
+    <PropertyValue Name="QuoteObjectNames">false</PropertyValue>
+    <PropertyValue Name="ResetTimestampToCurrentTimestamp">false</PropertyValue>
+    <PropertyValue Name="IncludeIntegerDisplayWidth">true</PropertyValue>
+    <PropertyValue Name="IgnoreColumnDefaultValues">false</PropertyValue>
+    <PropertyValue Name="IncludeConstraints">true</PropertyValue>
+    <PropertyValue Name="IncludeCheckConstraints">true</PropertyValue>
+    <PropertyValue Name="IncludeIndexes">true</PropertyValue>
+    <PropertyValue Name="IncludeEngine">true</PropertyValue>
+    <PropertyValue Name="IncludeComments">true</PropertyValue>
+    <PropertyValue Name="IncludePartitionClause">true</PropertyValue>
+    <PropertyValue Name="IncludePartitionEngine">false</PropertyValue>
+    <PropertyValue Name="ListIndividualHashPartitions">true</PropertyValue>
+    <PropertyValue Name="UseCreateOrReplace">true</PropertyValue>
+    <PropertyValue Name="IncludeApplicationTimePeriods">true</PropertyValue>
+    <PropertyValue Name="IncludeSystemVersioning">true</PropertyValue>
+    <PropertyValue Name="DisableConstraints">false</PropertyValue>
+    <PropertyValue Name="DisableForeignKeys">true</PropertyValue>
+    <PropertyValue Name="IncludeColumnNames">true</PropertyValue>
+    <PropertyValue Name="IncludeVirtualColumnsData">false</PropertyValue>
+    <PropertyValue Name="InsertCommit">false</PropertyValue>
+    <PropertyValue Name="InsertCommitAfter" xml:space="preserve">100</PropertyValue>
+    <PropertyValue Name="LockTables">false</PropertyValue>
+    <PropertyValue Name="BulkInsert">true</PropertyValue>
+    <PropertyValue Name="UseHexForBinary">true</PropertyValue>
+    <PropertyValue Name="IncludeRemoteTables">false</PropertyValue>
+    <PropertyValue Name="IncludeEncryptedPassword">true</PropertyValue>
+    <PropertyValue Name="IncludeUserInfo">true</PropertyValue>
+    <PropertyValue Name="IncludeRoles">true</PropertyValue>
+    <PropertyValue Name="DescribePrivilegesOnEveryDb">true</PropertyValue>
+    <PropertyValue Name="GenerateUserAndRolePrivileges">false</PropertyValue>
+    <PropertyValue Name="LogFileName" xml:space="preserve">D:\ezequ\Downloads\Backup.log</PropertyValue>
+    <PropertyValue Name="ErrorHandlingMode">2</PropertyValue>
+    <PropertyValue Name="WriteLog">false</PropertyValue>
+    <PropertyValue Name="GenerateScriptHeader">true</PropertyValue>
+    <PropertyValue Name="GeneateScriptType">0</PropertyValue>
+    <PropertyValue Name="IncludeAutoIncrement">true</PropertyValue>
+    <PropertyValue Name="IncludeAvgRowLength">true</PropertyValue>
+    <PropertyValue Name="IncludeRowFormat">true</PropertyValue>
+  </Options>
+</ExportTemplate>
