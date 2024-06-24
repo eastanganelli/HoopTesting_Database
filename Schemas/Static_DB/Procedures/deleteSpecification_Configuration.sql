@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteSpecification_Configuration TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteSpecification_Configuration TO 'manager'@'%';

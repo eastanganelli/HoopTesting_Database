@@ -25,4 +25,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectStandardsJSON TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE selectStandardsJSON TO 'manager'@'%';

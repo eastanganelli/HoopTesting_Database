@@ -24,4 +24,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectMaterials TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectMaterials TO 'manager'@'%';

@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteEndCap TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteEndCap TO 'manager'@'%';

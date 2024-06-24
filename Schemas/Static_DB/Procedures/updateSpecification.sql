@@ -32,4 +32,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE updateSpecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE updateSpecification TO 'manager'@'%';

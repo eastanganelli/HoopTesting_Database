@@ -20,4 +20,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectTestType TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectTestType TO 'manager'@'%';

@@ -44,4 +44,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertConditionalPeriod TO 'manager'@'%';

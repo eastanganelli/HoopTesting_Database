@@ -39,4 +39,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertSpecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertSpecification TO 'manager'@'%';

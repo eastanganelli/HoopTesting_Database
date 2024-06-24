@@ -17,4 +17,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteTest TO 'reportGenerator'@'%';
-GRANT EXECUTE ON PROCEDURE deleteTest TO 'reporting'@'%';

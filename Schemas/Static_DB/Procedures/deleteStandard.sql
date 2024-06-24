@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteStandard TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteStandard TO 'manager'@'%';

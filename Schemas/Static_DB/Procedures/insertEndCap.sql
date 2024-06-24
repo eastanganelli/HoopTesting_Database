@@ -38,4 +38,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertEndCap TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertEndCap TO 'manager'@'%';

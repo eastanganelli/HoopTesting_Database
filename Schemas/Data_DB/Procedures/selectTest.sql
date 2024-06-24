@@ -22,4 +22,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectTest TO 'reportGenerator'@'%';
-GRANT EXECUTE ON PROCEDURE selectTest TO 'reporting'@'%';

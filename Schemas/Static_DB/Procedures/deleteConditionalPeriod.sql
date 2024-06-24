@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteConditionalPeriod TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteConditionalPeriod TO 'manager'@'%';

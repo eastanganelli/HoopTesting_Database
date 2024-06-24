@@ -40,4 +40,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertStandard TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertStandard TO 'manager'@'%';

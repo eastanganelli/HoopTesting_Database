@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteRelatedMaterial TO 'manager'@'%';

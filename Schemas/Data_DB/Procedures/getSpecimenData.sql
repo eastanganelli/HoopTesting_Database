@@ -36,5 +36,3 @@ END
 $$
 
 DELIMITER ;
-
-GRANT EXECUTE ON PROCEDURE getSpecimenData TO 'reporting'@'%';

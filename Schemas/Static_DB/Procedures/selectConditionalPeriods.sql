@@ -23,4 +23,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectConditionalPeriods TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectConditionalPeriods TO 'manager'@'%';

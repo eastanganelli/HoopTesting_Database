@@ -39,4 +39,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertMaterial TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertMaterial TO 'manager'@'%';

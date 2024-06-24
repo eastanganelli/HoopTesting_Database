@@ -19,4 +19,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE countSpecimens TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE countSpecimens TO 'reporting'@'%';

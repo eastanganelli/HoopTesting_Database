@@ -28,4 +28,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSampleID TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectSampleID TO 'reporting'@'%';

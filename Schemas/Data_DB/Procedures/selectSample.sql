@@ -30,4 +30,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSample TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectSample TO 'reporting'@'%';

@@ -27,4 +27,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE deleteSpecification TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE deleteSpecification TO 'manager'@'%';

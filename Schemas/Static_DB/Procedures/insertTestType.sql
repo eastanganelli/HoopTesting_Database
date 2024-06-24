@@ -38,4 +38,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertTestType TO 'databaseManager'@'%';
-GRANT EXECUTE ON PROCEDURE insertTestType TO 'manager'@'%';

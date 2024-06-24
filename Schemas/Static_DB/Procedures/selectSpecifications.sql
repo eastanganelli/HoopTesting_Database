@@ -21,4 +21,3 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSpecifications TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE selectSpecifications TO 'manager'@'%';
