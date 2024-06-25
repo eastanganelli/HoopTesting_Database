@@ -18,8 +18,8 @@
   <Compression />
   <DatabaseObjects />
   <Options>
-    <PropertyValue Name="FlushLogs">false</PropertyValue>
-    <PropertyValue Name="SingleTransaction">false</PropertyValue>
+    <PropertyValue Name="FlushLogs">true</PropertyValue>
+    <PropertyValue Name="SingleTransaction">true</PropertyValue>
     <PropertyValue Name="LockAllTablesForRead">false</PropertyValue>
     <PropertyValue Name="FormatDdlText">true</PropertyValue>
     <PropertyValue Name="GenerateComments">true</PropertyValue>
@@ -50,7 +50,7 @@
     <PropertyValue Name="IncludeSystemVersioning">true</PropertyValue>
     <PropertyValue Name="DisableConstraints">false</PropertyValue>
     <PropertyValue Name="DisableForeignKeys">true</PropertyValue>
-    <PropertyValue Name="IncludeColumnNames">true</PropertyValue>
+    <PropertyValue Name="IncludeColumnNames">false</PropertyValue>
     <PropertyValue Name="IncludeVirtualColumnsData">false</PropertyValue>
     <PropertyValue Name="InsertCommit">false</PropertyValue>
     <PropertyValue Name="InsertCommitAfter" xml:space="preserve">100</PropertyValue>
