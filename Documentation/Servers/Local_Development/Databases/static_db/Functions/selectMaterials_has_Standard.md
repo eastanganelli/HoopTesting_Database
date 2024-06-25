@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|24/6/2024 17:13:33|
+|Last Modified|24/6/2024 17:13:33|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -51,7 +51,7 @@ BEGIN
       'descriptioin', m.description)) INTO result
     FROM material_has_standard mhs
       INNER JOIN material m
-        ON m.id = mhs.standard
+        ON m.id = mhs.material
     WHERE mhs.standard = idStandard;
   ELSE
     SELECT
@@ -73,4 +73,4 @@ END
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

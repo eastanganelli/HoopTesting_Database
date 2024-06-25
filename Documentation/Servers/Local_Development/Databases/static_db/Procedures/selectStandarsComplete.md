@@ -63,9 +63,7 @@ BEGIN
 END
 ```
 
-## <a name="#DependsOn"></a>Depends On _`8`_
-- ![User](../../../../../Images/user.svg) [dataCollector@%](../../../Users/dataCollector@%.md)
-- ![User](../../../../../Images/user.svg) [databaseManager@%](../../../Users/databaseManager@%.md)
+## <a name="#DependsOn"></a>Depends On _`6`_
 - ![Table](../../../../../Images/table.svg) [endcap](../Tables/endcap.md)
 - ![Table](../../../../../Images/table.svg) [enviroment](../Tables/enviroment.md)
 - ![Table](../../../../../Images/table.svg) [conditional_period](../Tables/conditional_period.md)
@@ -79,4 +77,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

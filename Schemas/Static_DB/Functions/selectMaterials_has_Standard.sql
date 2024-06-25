@@ -25,7 +25,7 @@ BEGIN
       'descriptioin', m.description)) INTO result
     FROM material_has_standard mhs
       INNER JOIN material m
-        ON m.id = mhs.standard
+        ON m.id = mhs.material
     WHERE mhs.standard = idStandard;
   ELSE
     SELECT

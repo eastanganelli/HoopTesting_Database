@@ -20,7 +20,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |[deleteSpecification_Configuration](deleteSpecification_Configuration.md)||
 |[deleteStandard](deleteStandard.md)||
 |[deleteTestType](deleteTestType.md)||
-|[insertConditionalPeriod](insertConditionalPeriod.md)||
+|[insertConditionalPeriod](insertConditionalPeriod.md)|Insertion of new Conditional Period|
 |[insertEndCap](insertEndCap.md)||
 |[insertEnviroment](insertEnviroment.md)||
 |[insertMaterial](insertMaterial.md)||
@@ -30,7 +30,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |[insertSpecification_Configuration](insertSpecification_Configuration.md)||
 |[insertStandard](insertStandard.md)||
 |[insertTestType](insertTestType.md)||
-|[selectConditionalPeriods](selectConditionalPeriods.md)||
+|[selectConditionalPeriods](selectConditionalPeriods.md)|Selection of Conditional Periods by Standard|
 |[selectEndCaps](selectEndCaps.md)||
 |[selectEnviroment](selectEnviroment.md)||
 |[selectMaterials](selectMaterials.md)||
@@ -51,4 +51,4 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

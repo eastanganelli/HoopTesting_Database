@@ -19,17 +19,7 @@
     <Title>Hoop Testing - Database Documentation</Title>
     <TitleImage>D:\ezequ\Projects\HoopTesting_System\sources\icons\System\HoopTesting_System.png</TitleImage>
     <Style>bootstrap/Default Dark.css</Style>
-    <FileFormat>Pdf</FileFormat>
-    <FormatOptions d3p1:type="PdfOptionsSerializationModel" xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance">
-      <PaperKind>A4</PaperKind>
-      <PaperSize>
-        <Width>595.2756</Width>
-        <Height>841.8898</Height>
-      </PaperSize>
-      <Landscape>false</Landscape>
-      <FontScale>100</FontScale>
-      <PageNumbering>false</PageNumbering>
-    </FormatOptions>
+    <FileFormat>Markdown</FileFormat>
     <OpenAfterGeneration>false</OpenAfterGeneration>
     <AppendTimestamp>false</AppendTimestamp>
     <Path>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database</Path>
@@ -37,17 +27,37 @@
   </Settings>
   <IncludedSection>
     <Section Uid="Root[Project].CoverPage[CoverPage]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Properties[Roles]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].Properties[Roles]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[data_db]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[data_db].Properties[Collation]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[static_db]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Events].Properties[DependsOn]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Events].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Events].Properties[UsedBy]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Packages].Properties[DependsOn]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Packages].Properties[PackageBodyProperties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Packages].Properties[Properties]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Packages].Properties[RoutinesList]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Databases].Database[].List[Packages].Properties[UsedBy]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Roles].Properties[DatabaseLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Roles].Properties[ObjectLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Roles].Properties[RolePrivileges]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Roles].Properties[UserMembers]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[DatabaseLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[DefaultRoles]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[Properties]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].Properties[SqlScript]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[DatabaseLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[DefaultRoles]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[Properties]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[databaseManager@%].Properties[SqlScript]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[AuthenticationString]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[Authentication]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[DatabaseLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[DefaultRoles]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxConnections]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxQueries]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[MaxUpdates]" Included="false" />
@@ -55,6 +65,8 @@
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[Properties]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[dataCollector@%].Properties[SqlScript]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%]" Included="true" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[DatabaseLevelPermissions]" Included="false" />
+    <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[DefaultRoles]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[Properties]" Included="false" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].List[Users].User[reportGenerator@%].Properties[SqlScript]" Included="true" />
     <Section Uid="Root[Project].List[Servers].Server[Local_Development].ServerProperties[BaseDirectory]" Included="false" />

@@ -47,7 +47,8 @@ BEGIN
 END
 ```
 
-## <a name="#DependsOn"></a>Depends On _`1`_
+## <a name="#DependsOn"></a>Depends On _`2`_
+- ![User](../../../../../Images/user.svg) [reportGenerator@%](../../../Users/reportGenerator@%.md)
 - ![Table](../../../../../Images/table.svg) [specimen](../Tables/specimen.md)
 
 
@@ -56,4 +57,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

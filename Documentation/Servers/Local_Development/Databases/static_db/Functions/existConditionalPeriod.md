@@ -54,9 +54,10 @@ END
 - ![Table](../../../../../Images/table.svg) [conditional_period](../Tables/conditional_period.md)
 
 
-## <a name="#UsedBy"></a>Used By
-No items found
+## <a name="#UsedBy"></a>Used By _`1`_
+- ![Procedure](../../../../../Images/procedure.svg) [deleteConditionalPeriod](../Procedures/deleteConditionalPeriod.md)
+
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

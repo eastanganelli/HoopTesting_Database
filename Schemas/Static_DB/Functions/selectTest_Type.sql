@@ -15,14 +15,14 @@ BEGIN
   SELECT
     COUNT(*) INTO elements
   FROM test_type tt
-  WHERE tt.id = idStandard;
+  WHERE tt.standard = idStandard;
 
   IF (elements > 0) THEN
       SELECT
         JSON_ARRAYAGG(JSON_OBJECT('key', tt.id,
         'testtype', tt.testType)) INTO result
       FROM test_type tt
-      WHERE tt.id = idStandard;
+      WHERE tt.standard = idStandard;
   ELSE
     SELECT
       '[]' INTO result;

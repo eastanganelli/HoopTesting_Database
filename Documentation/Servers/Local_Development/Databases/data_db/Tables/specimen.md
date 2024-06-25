@@ -94,17 +94,17 @@ REFERENCES sample (id);
 
 ## <a name="#UsedBy"></a>Used By _`17`_
 - ![Procedure](../../../../../Images/procedure.svg) [countSpecimens](../Procedures/countSpecimens.md)
-- ![Procedure](../../../../../Images/procedure.svg) [getSpecimenData](../Procedures/getSpecimenData.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertData](../Procedures/insertData.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertSpecimen](../Procedures/insertSpecimen.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectSpecimen](../Procedures/selectSpecimen.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectCompareTests](../Procedures/selectCompareTests.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectTest](../Procedures/selectTest.md)
+- ![Procedure](../../../../../Images/procedure.svg) [updateSpecimen](../Procedures/updateSpecimen.md)
 - ![Table](../../../../../Images/table.svg) [data](data.md)
 - ![Trigger](../../../../../Images/trigger.svg) [DeleteTest](../Triggers/DeleteTest.md)
 - ![Trigger](../../../../../Images/trigger.svg) [DeleteTestSample](../Triggers/DeleteTestSample.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteTest](../Procedures/deleteTest.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectCompareTests](../Procedures/selectCompareTests.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectSpecimen](../Procedures/selectSpecimen.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectTest](../Procedures/selectTest.md)
-- ![Procedure](../../../../../Images/procedure.svg) [updateSpecimen](../Procedures/updateSpecimen.md)
+- ![Procedure](../../../../../Images/procedure.svg) [getSpecimenData](../Procedures/getSpecimenData.md)
 - ![Function](../../../../../Images/function.svg) [countSpecimens](../Functions/countSpecimens.md)
 - ![Function](../../../../../Images/function.svg) [selectTestNumber](../Functions/selectTestNumber.md)
 - ![Function](../../../../../Images/function.svg) [selectTestSpecimen](../Functions/selectTestSpecimen.md)
@@ -114,4 +114,4 @@ REFERENCES sample (id);
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

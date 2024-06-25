@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|5|
+|Auto Increment|0|
 |Average Row Length|0|
 |Charset|utf8mb4|
 |Collation|utf8mb4_0900_ai_ci|
@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|11/6/2024 11:06:02|
-|Last Modified|1/1/0001 00:00:00|
+|Last Modified|24/6/2024 23:38:54|
 
 
 ## <a name="#Columns"></a>Columns
@@ -85,4 +85,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

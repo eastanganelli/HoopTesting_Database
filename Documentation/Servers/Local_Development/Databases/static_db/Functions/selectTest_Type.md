@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|12/6/2024 23:06:23|
-|Last Modified|12/6/2024 23:06:23|
+|Created|25/6/2024 01:20:43|
+|Last Modified|25/6/2024 01:20:43|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -41,14 +41,14 @@ BEGIN
   SELECT
     COUNT(*) INTO elements
   FROM test_type tt
-  WHERE tt.id = idStandard;
+  WHERE tt.standard = idStandard;
 
   IF (elements > 0) THEN
     SELECT
       JSON_ARRAYAGG(JSON_OBJECT('key', tt.id,
       'testtype', tt.testType)) INTO result
     FROM test_type tt
-    WHERE tt.id = idStandard;
+    WHERE tt.standard = idStandard;
   ELSE
     SELECT
       '[]' INTO result;
@@ -68,4 +68,4 @@ END
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

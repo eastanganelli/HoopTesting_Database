@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|6|
+|Auto Increment|7|
 |Average Row Length|16384|
 |Charset|utf8mb4|
 |Collation|utf8mb4_general_ci|
@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|11/6/2024 11:06:02|
-|Last Modified|1/1/0001 00:00:00|
+|Last Modified|24/6/2024 14:14:44|
 
 
 ## <a name="#Columns"></a>Columns
@@ -71,7 +71,6 @@ No items found
 ## <a name="#UsedBy"></a>Used By _`19`_
 - ![Procedure](../../../../../Images/procedure.svg) [selectMaterials](../Procedures/selectMaterials.md)
 - ![Procedure](../../../../../Images/procedure.svg) [selectStandards](../Procedures/selectStandards.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteStandard](../Procedures/deleteStandard.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertConditionalPeriod](../Procedures/insertConditionalPeriod.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertEndCap](../Procedures/insertEndCap.md)
@@ -87,9 +86,10 @@ No items found
 - ![Table](../../../../../Images/table.svg) [material_has_standard](material_has_standard.md)
 - ![Trigger](../../../../../Images/trigger.svg) [deleteStandardChilds](../Triggers/deleteStandardChilds.md)
 - ![Table](../../../../../Images/table.svg) [test_type](test_type.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Function](../../../../../Images/function.svg) [existStandard](../Functions/existStandard.md)
 
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

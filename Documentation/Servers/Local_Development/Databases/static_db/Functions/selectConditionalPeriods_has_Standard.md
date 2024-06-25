@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/function64.svg) selectConditionalPeriods_has_Standard
 
 ## <a name="#Description"></a>Description
-> 
+> Selection of Conditional Periods of a Standard
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|24/6/2024 23:05:15|
+|Last Modified|24/6/2024 23:05:15|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -33,6 +33,7 @@ DEFINER = 'root'
 FUNCTION selectConditionalPeriods_has_Standard (idStandard int UNSIGNED)
 RETURNS json
 DETERMINISTIC
+COMMENT 'Selection of Conditional Periods of a Standard'
 BEGIN
 
   DECLARE result json;
@@ -44,13 +45,22 @@ BEGIN
   WHERE cp.standard = idStandard;
 
   IF (elements > 0) THEN
+    WITH periodsOrder
+    AS
+    (SELECT
+        cp.id AS `key`,
+        CONCAT(CONVERT(cp.time, char), ' ', cp.timeType, ' ± ', CONVERT(cp.aproxTime, char), ' ', cp.aproxType) AS `condPeriod`,
+        cp.minwall,
+        cp.maxwall
+      FROM conditional_period cp
+      WHERE cp.standard = idStandard)
+
     SELECT
-      JSON_ARRAYAGG(JSON_OBJECT('key', cp.id,
-      'time', cp.time,
-      'minwall', cp.minwall,
-      'maxwall', cp.maxwall)) INTO result
-    FROM conditional_period cp
-    WHERE cp.standard = idStandard;
+      JSON_ARRAYAGG(JSON_OBJECT('key', po.`key`,
+      'condPeriod', po.condPeriod,
+      'minwall', po.minwall,
+      'maxwall', po.maxwall)) INTO result
+    FROM periodsOrder po;
   ELSE
     SELECT
       '[]' INTO result;
@@ -70,4 +80,4 @@ END
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

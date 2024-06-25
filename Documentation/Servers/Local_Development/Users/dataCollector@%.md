@@ -10,7 +10,6 @@ Project>[Servers](../../Servers.md)>[Local_Development](../Local_Development.md)
 |Type|Action|Object Name|Object Type|
 |---|---|---|---|
 |Grant|EXECUTE|countspecimens|Procedure|
-|Grant|EXECUTE|getspecimendata|Procedure|
 |Grant|EXECUTE|insertdata|Procedure|
 |Grant|EXECUTE|insertsample|Procedure|
 |Grant|EXECUTE|insertspecimen|Procedure|
@@ -19,21 +18,18 @@ Project>[Servers](../../Servers.md)>[Local_Development](../Local_Development.md)
 |Grant|EXECUTE|selectenviroment|Procedure|
 |Grant|EXECUTE|selectmaterials|Procedure|
 |Grant|EXECUTE|selectoperators|Procedure|
+|Grant|EXECUTE|selectsample|Procedure|
 |Grant|EXECUTE|selectsampleid|Procedure|
 |Grant|EXECUTE|selectsettingsspecification|Procedure|
 |Grant|EXECUTE|selectspecifications|Procedure|
+|Grant|EXECUTE|selectspecimen|Procedure|
 |Grant|EXECUTE|selectstandards|Procedure|
-|Grant|EXECUTE|selectstandarscomplete|Procedure|
 |Grant|EXECUTE|selecttesttype|Procedure|
-
-## <a name="#DefaultRoles"></a>Default Roles
-No items found
 
 ## <a name="#SqlScript"></a>SQL Script
 ```SQL
-CREATE USER 'dataCollector'@'%' IDENTIFIED WITH mysql_native_password PASSWORD EXPIRE NEVER;
+CREATE USER 'dataCollector'@'%' IDENTIFIED WITH caching_sha2_password PASSWORD EXPIRE NEVER;
 GRANT EXECUTE ON PROCEDURE data_db.countspecimens TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE data_db.getspecimendata TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE data_db.insertdata TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE data_db.insertsample TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE data_db.insertspecimen TO 'dataCollector'@'%';
@@ -42,14 +38,15 @@ GRANT EXECUTE ON PROCEDURE static_db.selectendcaps TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectenviroment TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectmaterials TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectoperators TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE data_db.selectsample TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE data_db.selectsampleid TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectsettingsspecification TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectspecifications TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE data_db.selectspecimen TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selectstandards TO 'dataCollector'@'%';
-GRANT EXECUTE ON PROCEDURE static_db.selectstandarscomplete TO 'dataCollector'@'%';
 GRANT EXECUTE ON PROCEDURE static_db.selecttesttype TO 'dataCollector'@'%';
 ```
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

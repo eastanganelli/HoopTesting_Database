@@ -22,7 +22,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |[existSpecimen](existSpecimen.md)||
 |[existStandard](existStandard.md)||
 |[existTest_Type](existTest_Type.md)||
-|[selectConditionalPeriods_has_Standard](selectConditionalPeriods_has_Standard.md)||
+|[selectConditionalPeriods_has_Standard](selectConditionalPeriods_has_Standard.md)|Selection of Conditional Periods of a Standard|
 |[selectEndCaps_has_Standard](selectEndCaps_has_Standard.md)||
 |[selectEnviroments_has_Standard](selectEnviroments_has_Standard.md)||
 |[selectMaterials_has_Standard](selectMaterials_has_Standard.md)||
@@ -32,4 +32,4 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

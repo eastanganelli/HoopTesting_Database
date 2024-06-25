@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|12|
+|Auto Increment|0|
 |Average Row Length|8192|
 |Charset|utf8mb4|
 |Collation|utf8mb4_general_ci|
@@ -95,4 +95,4 @@ REFERENCES specification (id) ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

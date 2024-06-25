@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/procedure64.svg) insertConditionalPeriod
 
 ## <a name="#Description"></a>Description
-> 
+> Insertion of new Conditional Period
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|24/6/2024 22:41:34|
+|Last Modified|24/6/2024 22:41:34|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -26,14 +26,18 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |idStandard|INT||11||
 |minwall|INT||11||
 |maxwall|INT||11||
-|time|VARCHAR|20|||
+|time|INT||11||
+|timeType|VARCHAR|3|||
+|aproxTime|INT||11||
+|aproxType|VARCHAR|3|||
 
 ## <a name="#SqlScript"></a>SQL Script
 ```SQL
 CREATE
 DEFINER = 'root'
-PROCEDURE insertConditionalPeriod (IN idStandard int UNSIGNED, IN minwall int, IN maxwall int, IN time varchar(20))
+PROCEDURE insertConditionalPeriod (IN idStandard int UNSIGNED, IN minwall int UNSIGNED, IN maxwall int UNSIGNED, IN time int UNSIGNED, IN timeType varchar(3), IN aproxTime int UNSIGNED, IN aproxType varchar(3))
 DETERMINISTIC
+COMMENT 'Insertion of new Conditional Period'
 BEGIN
 
   DECLARE elements int UNSIGNED;
@@ -44,15 +48,18 @@ BEGIN
   WHERE cp.standard = idStandard
   AND cp.minwall = minwall
   AND cp.maxwall = maxwall
-  AND cp.time LIKE time;
+  AND cp.time = time
+  AND cp.timeType LIKE timeType
+  AND cp.aproxTime = aproxTime
+  AND cp.aproxType LIKE aproxType;
 
   IF elements = 0 THEN
-    INSERT HIGH_PRIORITY INTO conditional_period (standard, time, minwall, maxwall)
-      VALUES (idStandard, time, minwall, maxwall);
+    INSERT HIGH_PRIORITY INTO conditional_period (standard, time, timeType, aproxTime, aproxType, minwall, maxwall)
+      VALUES (idStandard, time, timeType, aproxTime, aproxType, minwall, maxwall);
 
     SELECT
       cp.id AS `key`,
-      cp.time AS `time`,
+      CONCAT(CONVERT(cp.time, char), ' ', cp.timeType, ' ± ', CONVERT(cp.aproxTime, char), ' ', cp.aproxType) AS `condperiod`,
       cp.minwall AS `minwall`,
       cp.maxwall AS `maxwall`
     FROM conditional_period cp
@@ -80,4 +87,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

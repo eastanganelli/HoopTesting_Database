@@ -8,7 +8,7 @@ CREATE PROCEDURE `deleteConditionalPeriod`(IN id int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
-  IF (exist(id) = TRUE) THEN
+  IF (existConditionalPeriod(id) = TRUE) THEN
     DELETE LOW_PRIORITY QUICK
       FROM conditional_period cp
     WHERE cp.id = id

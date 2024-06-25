@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|4|
+|Auto Increment|0|
 |Average Row Length|8192|
 |Charset|utf8mb4|
 |Collation|utf8mb4_0900_ai_ci|
@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|11/6/2024 11:06:02|
-|Last Modified|1/1/0001 00:00:00|
+|Last Modified|24/6/2024 16:36:44|
 
 
 ## <a name="#Columns"></a>Columns
@@ -86,9 +86,9 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ## <a name="#UsedBy"></a>Used By _`8`_
 - ![Procedure](../../../../../Images/procedure.svg) [selectMaterials](../Procedures/selectMaterials.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteRelatedMaterial](../Procedures/deleteRelatedMaterial.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertRelatedMaterial](../Procedures/insertRelatedMaterial.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Function](../../../../../Images/function.svg) [existRelatedMaterial](../Functions/existRelatedMaterial.md)
 - ![Function](../../../../../Images/function.svg) [selectMaterials_has_Standard](../Functions/selectMaterials_has_Standard.md)
 - ![Trigger](../../../../../Images/trigger.svg) [deleteMaterialChilds](../Triggers/deleteMaterialChilds.md)
@@ -97,4 +97,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

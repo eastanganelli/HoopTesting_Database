@@ -46,9 +46,8 @@ BEGIN
 END
 ```
 
-## <a name="#DependsOn"></a>Depends On _`5`_
+## <a name="#DependsOn"></a>Depends On _`4`_
 - ![User](../../../../../Images/user.svg) [dataCollector@%](../../../Users/dataCollector@%.md)
-- ![User](../../../../../Images/user.svg) [databaseManager@%](../../../Users/databaseManager@%.md)
 - ![Table](../../../../../Images/table.svg) [material](../Tables/material.md)
 - ![Table](../../../../../Images/table.svg) [material_has_standard](../Tables/material_has_standard.md)
 - ![Table](../../../../../Images/table.svg) [standard](../Tables/standard.md)
@@ -59,4 +58,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

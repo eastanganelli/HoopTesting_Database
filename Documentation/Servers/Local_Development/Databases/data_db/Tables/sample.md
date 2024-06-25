@@ -89,20 +89,20 @@ COMMENT = 'Test Sample information';
 No items found
 
 ## <a name="#UsedBy"></a>Used By _`12`_
-- ![Procedure](../../../../../Images/procedure.svg) [getSpecimenData](../Procedures/getSpecimenData.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertSample](../Procedures/insertSample.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertSpecimen](../Procedures/insertSpecimen.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectSampleID](../Procedures/selectSampleID.md)
-- ![Trigger](../../../../../Images/trigger.svg) [NewSample](../Triggers/NewSample.md)
-- ![Table](../../../../../Images/table.svg) [specimen](specimen.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectCompareTests](../Procedures/selectCompareTests.md)
 - ![Procedure](../../../../../Images/procedure.svg) [selectSample](../Procedures/selectSample.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectSampleID](../Procedures/selectSampleID.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectCompareTests](../Procedures/selectCompareTests.md)
 - ![Procedure](../../../../../Images/procedure.svg) [selectTest](../Procedures/selectTest.md)
 - ![Procedure](../../../../../Images/procedure.svg) [selectTests](../Procedures/selectTests.md)
+- ![Trigger](../../../../../Images/trigger.svg) [NewSample](../Triggers/NewSample.md)
+- ![Table](../../../../../Images/table.svg) [specimen](specimen.md)
+- ![Procedure](../../../../../Images/procedure.svg) [getSpecimenData](../Procedures/getSpecimenData.md)
 - ![Function](../../../../../Images/function.svg) [selectTestSample](../Functions/selectTestSample.md)
 - ![Trigger](../../../../../Images/trigger.svg) [DeleteTestSample](../Triggers/DeleteTestSample.md)
 
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

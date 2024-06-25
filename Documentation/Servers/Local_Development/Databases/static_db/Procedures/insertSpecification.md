@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:01|
-|Last Modified|11/6/2024 11:06:01|
+|Created|25/6/2024 00:54:16|
+|Last Modified|25/6/2024 00:54:16|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -74,4 +74,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

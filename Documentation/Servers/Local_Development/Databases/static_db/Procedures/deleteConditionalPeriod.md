@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|24/6/2024 22:49:34|
+|Last Modified|24/6/2024 22:49:34|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -33,7 +33,7 @@ PROCEDURE deleteConditionalPeriod (IN id int UNSIGNED)
 DETERMINISTIC
 BEGIN
 
-  IF (exist(id) = TRUE) THEN
+  IF (existConditionalPeriod(id) = TRUE) THEN
     DELETE LOW_PRIORITY QUICK
       FROM conditional_period cp
     WHERE cp.id = id
@@ -49,8 +49,9 @@ BEGIN
 END
 ```
 
-## <a name="#DependsOn"></a>Depends On _`2`_
+## <a name="#DependsOn"></a>Depends On _`3`_
 - ![User](../../../../../Images/user.svg) [databaseManager@%](../../../Users/databaseManager@%.md)
+- ![Function](../../../../../Images/function.svg) [existConditionalPeriod](../Functions/existConditionalPeriod.md)
 - ![Table](../../../../../Images/table.svg) [conditional_period](../Tables/conditional_period.md)
 
 
@@ -59,4 +60,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

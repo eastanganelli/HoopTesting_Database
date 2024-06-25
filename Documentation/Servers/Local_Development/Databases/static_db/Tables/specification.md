@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|11|
+|Auto Increment|22|
 |Average Row Length|16384|
 |Charset|utf8mb4|
 |Collation|utf8mb4_general_ci|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:01|
-|Last Modified|1/1/0001 00:00:00|
+|Created|25/6/2024 00:48:11|
+|Last Modified|24/6/2024 23:46:56|
 
 
 ## <a name="#Columns"></a>Columns
@@ -37,7 +37,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |[![Primary Key ](../../../../../Images/primarykey.svg)](#Indexes)[![Indexes ](../../../../../Images/index.svg)](#Indexes)|id|INT||11||True|False|False|True|True||False|False||
 |[![Foreign Keys FK_specification_material_id: material](../../../../../Images/foreignkey.svg)](#ForeignKeys)[![Indexes FK_specification_material_id](../../../../../Images/index.svg)](#Indexes)|material|INT||11||True|False|False|True|False||False|False||
 ||name|VARCHAR|15|||False|False|False|True|False||False|False||
-||description|VARCHAR|120|||False|False|False|False|False|'Sin Descripción'|False|False||
+||description|VARCHAR|120|||False|False|False|True|False|'Sin Descripción'|False|False||
 ||createdAt|DATETIME||0||False|False|False|True|False||False|False||
 ||updatedAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
 
@@ -63,7 +63,7 @@ CREATE TABLE specification (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
   material int UNSIGNED NOT NULL,
   name varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  description varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'Sin Descripción',
+  description varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'Sin Descripción',
   createdAt datetime NOT NULL,
   updatedAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
@@ -100,4 +100,4 @@ REFERENCES material (id) ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

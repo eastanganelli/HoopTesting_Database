@@ -4,8 +4,9 @@ SET @saved_sql_mode = @@sql_mode
 $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE PROCEDURE `insertConditionalPeriod`(IN idStandard int UNSIGNED, IN minwall int, IN maxwall int, IN time varchar(20))
+CREATE PROCEDURE `insertConditionalPeriod`(IN idStandard INT UNSIGNED, IN minwall INT UNSIGNED, IN maxwall INT UNSIGNED, IN time INT UNSIGNED, IN timeType VARCHAR(3), IN aproxTime INT UNSIGNED, IN aproxType VARCHAR(3))
   DETERMINISTIC
+  COMMENT 'Insertion of new Conditional Period'
 BEGIN
 
   DECLARE elements int UNSIGNED;
@@ -16,15 +17,18 @@ BEGIN
   WHERE cp.standard = idStandard
   AND cp.minwall = minwall
   AND cp.maxwall = maxwall
-  AND cp.time LIKE time;
+  AND cp.time = time
+  AND cp.timeType LIKE timeType
+  AND cp.aproxTime = aproxTime
+  AND cp.aproxType LIKE aproxType;
 
   IF elements = 0 THEN
-    INSERT HIGH_PRIORITY INTO conditional_period (standard, time, minwall, maxwall)
-      VALUES (idStandard, time, minwall, maxwall);
+    INSERT HIGH_PRIORITY INTO conditional_period (standard, time, timeType, aproxTime, aproxType, minwall, maxwall)
+      VALUES (idStandard, time, timeType, aproxTime, aproxType, minwall, maxwall);
 
     SELECT
       cp.id AS `key`,
-      cp.time AS `time`,
+      CONCAT(CONVERT(cp.time, CHAR), ' ', cp.timeType, ' ± ', CONVERT(cp.aproxTime, CHAR), ' ', cp.aproxType) AS `condperiod`,
       cp.minwall AS `minwall`,
       cp.maxwall AS `maxwall`
     FROM conditional_period cp

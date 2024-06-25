@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|6|
+|Auto Increment|0|
 |Average Row Length|3276|
 |Charset|utf8mb4|
 |Collation|utf8mb4_unicode_ci|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:02|
-|Last Modified|1/1/0001 00:00:00|
+|Created|24/6/2024 22:36:05|
+|Last Modified|24/6/2024 23:37:02|
 
 
 ## <a name="#Columns"></a>Columns
@@ -36,7 +36,10 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |:---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |[![Primary Key ](../../../../../Images/primarykey.svg)](#Indexes)[![Indexes ](../../../../../Images/index.svg)](#Indexes)|id|INT||11||True|False|False|True|True||False|False||
 |[![Foreign Keys FK_conditional_period_standard_id: standard](../../../../../Images/foreignkey.svg)](#ForeignKeys)[![Indexes FK_conditional_period_standard_id](../../../../../Images/index.svg)](#Indexes)|standard|INT||11||True|False|False|True|False||False|False||
-||time|VARCHAR|20|||False|False|False|True|False||False|False||
+||time|INT||11||True|False|False|True|False|'0'|False|False||
+||timeType|VARCHAR|3|||False|False|False|True|False|'h'|False|False||
+||aproxTime|INT||11||True|False|False|True|False|'0'|False|False||
+||aproxType|VARCHAR|3|||False|False|False|True|False|'min'|False|False||
 ||minwall|INT||11||True|False|False|True|False||False|False||
 ||maxwall|INT||11||True|False|False|True|False||False|False||
 ||createdAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
@@ -58,7 +61,10 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 CREATE TABLE conditional_period (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
   standard int UNSIGNED NOT NULL,
-  time varchar(20) NOT NULL,
+  time int UNSIGNED NOT NULL DEFAULT 0,
+  timeType varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'h',
+  aproxTime int UNSIGNED NOT NULL DEFAULT 0,
+  aproxType varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'min',
   minwall int UNSIGNED NOT NULL,
   maxwall int UNSIGNED NOT NULL,
   createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -82,9 +88,9 @@ REFERENCES standard (id);
 
 ## <a name="#UsedBy"></a>Used By _`7`_
 - ![Procedure](../../../../../Images/procedure.svg) [selectConditionalPeriods](../Procedures/selectConditionalPeriods.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteConditionalPeriod](../Procedures/deleteConditionalPeriod.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertConditionalPeriod](../Procedures/insertConditionalPeriod.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Function](../../../../../Images/function.svg) [existConditionalPeriod](../Functions/existConditionalPeriod.md)
 - ![Function](../../../../../Images/function.svg) [selectConditionalPeriods_has_Standard](../Functions/selectConditionalPeriods_has_Standard.md)
 - ![Trigger](../../../../../Images/trigger.svg) [deleteStandardChilds](../Triggers/deleteStandardChilds.md)
@@ -92,4 +98,4 @@ REFERENCES standard (id);
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

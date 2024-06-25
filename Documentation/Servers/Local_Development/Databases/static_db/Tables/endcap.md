@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|5|
+|Auto Increment|0|
 |Average Row Length|5461|
 |Charset|latin1|
 |Collation|latin1_swedish_ci|
@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|11/6/2024 11:06:02|
-|Last Modified|1/1/0001 00:00:00|
+|Last Modified|24/6/2024 18:35:57|
 
 
 ## <a name="#Columns"></a>Columns
@@ -77,9 +77,9 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ## <a name="#UsedBy"></a>Used By _`7`_
 - ![Procedure](../../../../../Images/procedure.svg) [selectEndCaps](../Procedures/selectEndCaps.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteEndCap](../Procedures/deleteEndCap.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertEndCap](../Procedures/insertEndCap.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Function](../../../../../Images/function.svg) [existEndCap](../Functions/existEndCap.md)
 - ![Function](../../../../../Images/function.svg) [selectEndCaps_has_Standard](../Functions/selectEndCaps_has_Standard.md)
 - ![Trigger](../../../../../Images/trigger.svg) [deleteStandardChilds](../Triggers/deleteStandardChilds.md)
@@ -87,4 +87,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|

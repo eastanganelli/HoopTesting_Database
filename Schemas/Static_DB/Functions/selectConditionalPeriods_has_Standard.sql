@@ -7,6 +7,7 @@ $$
 CREATE FUNCTION `selectConditionalPeriods_has_Standard`(idStandard int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC
+  COMMENT 'Selection of Conditional Periods of a Standard'
 BEGIN
 
   DECLARE result json;
@@ -18,13 +19,22 @@ BEGIN
   WHERE cp.standard = idStandard;
 
   IF (elements > 0) THEN
+    WITH periodsOrder AS (
+      SELECT
+        cp.id AS `key`,
+        CONCAT(CONVERT(cp.time, CHAR), ' ', cp.timeType, ' ± ', CONVERT(cp.aproxTime, CHAR), ' ', cp.aproxType) AS `condPeriod`,
+        cp.minwall,
+        cp.maxwall
+      FROM conditional_period cp
+      WHERE cp.standard = idStandard
+    )
+
     SELECT
-      JSON_ARRAYAGG(JSON_OBJECT('key', cp.id,
-      'time', cp.time,
-      'minwall', cp.minwall,
-      'maxwall', cp.maxwall)) INTO result
-    FROM conditional_period cp
-    WHERE cp.standard = idStandard;
+      JSON_ARRAYAGG(JSON_OBJECT('key', po.`key`,
+      'condPeriod', po.condPeriod,
+      'minwall', po.minwall,
+      'maxwall', po.maxwall)) INTO result
+    FROM periodsOrder po;
   ELSE
     SELECT
       '[]' INTO result;

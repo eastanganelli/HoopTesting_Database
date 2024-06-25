@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|13|
+|Auto Increment|14|
 |Average Row Length|16384|
 |Charset|utf8mb4|
 |Collation|utf8mb4_general_ci|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:01|
-|Last Modified|1/1/0001 00:00:00|
+|Created|25/6/2024 00:48:45|
+|Last Modified|24/6/2024 16:36:35|
 
 
 ## <a name="#Columns"></a>Columns
@@ -36,7 +36,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |:---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |[![Primary Key ](../../../../../Images/primarykey.svg)](#Indexes)[![Indexes ](../../../../../Images/index.svg)](#Indexes)|id|INT||11||True|False|False|True|True||False|False||
 ||name|VARCHAR|15|||False|False|False|True|False||False|False||
-||description|VARCHAR|120|||False|False|False|True|False||False|False||
+||description|VARCHAR|120|||False|False|False|True|False|'Sin descripción'|False|False||
 ||createdAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
 ||updatedAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
 
@@ -50,12 +50,17 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |---|---|---|---|---|
 |deleteMaterialChilds|BEFORE|DELETE|Definer|root|
 
+## <a name="#Permissions"></a>Permissions
+|Action|Owner|
+|---|---|
+|SELECT|[databaseManager@%](../../../Users/databaseManager@%.md)|
+
 ## <a name="#SqlScript"></a>SQL Script
 ```SQL
 CREATE TABLE material (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
   name varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  description varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  description varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'Sin descripción',
   createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updatedAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
@@ -67,12 +72,12 @@ COLLATE utf8mb4_general_ci,
 COMMENT = 'Material of Hoop';
 ```
 
-## <a name="#DependsOn"></a>Depends On
-No items found
+## <a name="#DependsOn"></a>Depends On _`1`_
+- ![User](../../../../../Images/user.svg) [databaseManager@%](../../../Users/databaseManager@%.md)
+
 
 ## <a name="#UsedBy"></a>Used By _`13`_
 - ![Procedure](../../../../../Images/procedure.svg) [selectMaterials](../Procedures/selectMaterials.md)
-- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Procedure](../../../../../Images/procedure.svg) [deleteMaterial](../Procedures/deleteMaterial.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertMaterial](../Procedures/insertMaterial.md)
 - ![Procedure](../../../../../Images/procedure.svg) [insertRelatedMaterial](../Procedures/insertRelatedMaterial.md)
@@ -82,10 +87,11 @@ No items found
 - ![Trigger](../../../../../Images/trigger.svg) [deleteMaterialChilds](../Triggers/deleteMaterialChilds.md)
 - ![Table](../../../../../Images/table.svg) [material_has_standard](material_has_standard.md)
 - ![Table](../../../../../Images/table.svg) [specification](specification.md)
+- ![Procedure](../../../../../Images/procedure.svg) [selectStandarsComplete](../Procedures/selectStandarsComplete.md)
 - ![Function](../../../../../Images/function.svg) [existMaterial](../Functions/existMaterial.md)
 - ![Function](../../../../../Images/function.svg) [selectMaterials_has_Standard](../Functions/selectMaterials_has_Standard.md)
 
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 18/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
