@@ -19,7 +19,7 @@
     <Title>Hoop Testing - Database Documentation</Title>
     <TitleImage>D:\ezequ\Projects\HoopTesting_System\sources\icons\System\HoopTesting_System.png</TitleImage>
     <Style>bootstrap/Default Dark.css</Style>
-    <FileFormat>Markdown</FileFormat>
+    <FileFormat>Html</FileFormat>
     <OpenAfterGeneration>false</OpenAfterGeneration>
     <AppendTimestamp>false</AppendTimestamp>
     <Path>D:\ezequ\Projects\HoopTesting_System\HoopTesting_Database</Path>
