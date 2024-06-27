@@ -1,9 +1,5 @@
 ﻿DELIMITER $$
 
-SET @saved_sql_mode = @@sql_mode
-$$
-SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
-$$
 CREATE TRIGGER `deleteConfigurationsChilds`
 	BEFORE DELETE
 	ON specification
@@ -14,12 +10,12 @@ BEGIN
 
   SELECT
     COUNT(*) INTO childsCount
-  FROM specification_configuration sc
+  FROM settings_specification sc
   WHERE sc.specification = OLD.id;
 
   IF childsCount > 0 THEN
     DELETE LOW_PRIORITY QUICK
-      FROM specification_configuration sc
+      FROM settings_specification sc
     WHERE sc.specification = OLD.id;
 
   END IF;

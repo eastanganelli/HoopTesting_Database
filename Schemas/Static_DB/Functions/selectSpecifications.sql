@@ -1,9 +1,5 @@
 ﻿DELIMITER $$
 
-SET @saved_sql_mode = @@sql_mode
-$$
-SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
-$$
 CREATE FUNCTION `selectSpecifications`(idMaterial int UNSIGNED)
   RETURNS JSON
   DETERMINISTIC
@@ -22,7 +18,7 @@ BEGIN
       JSON_ARRAYAGG(JSON_OBJECT('key', s.id,
       'specification', s.name,
       'description', (IF(s.description IS NULL, '', s.description)),
-      'configurations', (selectSpecification_Configurations(s.id)))) INTO result
+      'configurations', (selectSettingsSpecification(s.id)))) INTO result
     FROM specification s
     WHERE s.material = idMaterial;
   ELSE

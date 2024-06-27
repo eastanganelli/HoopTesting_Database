@@ -1,9 +1,5 @@
 ﻿DELIMITER $$
 
-SET @saved_sql_mode = @@sql_mode
-$$
-SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
-$$
 CREATE PROCEDURE `selectSettingsSpecification`(IN idSpecification int UNSIGNED)
   DETERMINISTIC
 BEGIN
@@ -11,8 +7,9 @@ BEGIN
   SELECT
     sc.id AS idSetting,
     sc.time AS time,
+    sc.timeType AS timeType,
     sc.temperature AS temperature
-  FROM specification_configuration sc
+  FROM settings_specification sc
   WHERE sc.specification = idSpecification;
 
 END
