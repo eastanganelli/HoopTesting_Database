@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) enviroment
 
 ## <a name="#Description"></a>Description
-> Enviroments
+> Enviroments related to a Standard
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:02|
-|Last Modified|24/6/2024 18:52:43|
+|Created|26/6/2024 20:38:44|
+|Last Modified|1/1/0001 00:00:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -37,7 +37,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |[![Primary Key ](../../../../../Images/primarykey.svg)](#Indexes)[![Indexes ](../../../../../Images/index.svg)](#Indexes)|id|INT||11||True|False|False|True|True||False|False||
 |[![Foreign Keys FK_enviroment_standard_id: standard](../../../../../Images/foreignkey.svg)](#ForeignKeys)[![Indexes FK_enviroment_standard_id](../../../../../Images/index.svg)](#Indexes)|standard|INT||11||True|False|False|True|False||False|False||
 ||inside|VARCHAR|30|||False|False|False|True|False||False|False||
-||outside|VARCHAR|30|||False|False|False|True|False||False|False||
+||outside|VARCHAR|30|||False|False|False|False|False|'No Fluid'|False|False||
 ||createdAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
 ||updatedAt|DATETIME||0||False|False|False|True|False|CURRENT_TIMESTAMP|False|False||
 
@@ -58,7 +58,7 @@ CREATE TABLE enviroment (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
   standard int UNSIGNED NOT NULL,
   inside varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  outside varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  outside varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'No Fluid',
   createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updatedAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
@@ -67,7 +67,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
 CHARACTER SET latin1,
 COLLATE latin1_swedish_ci,
-COMMENT = 'Enviroments';
+COMMENT = 'Enviroments related to a Standard';
 
 ALTER TABLE enviroment
 ADD CONSTRAINT FK_enviroment_standard_id FOREIGN KEY (standard)
@@ -90,4 +90,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

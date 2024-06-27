@@ -12,7 +12,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
-COMMENT = 'Conditional period by Specification',
+COMMENT = 'Configuration by Specification',
 ROW_FORMAT = DYNAMIC;
 
 ALTER TABLE `specification_configuration` 

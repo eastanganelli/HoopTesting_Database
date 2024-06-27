@@ -10,8 +10,8 @@ BEGIN
 
   SELECT
     ehs.id,
-    ehs.inside,
-    ehs.outside
+    ehs.inside#,
+    #ehs.outside
   FROM enviroment ehs
   WHERE ehs.standard = idStandard;
 

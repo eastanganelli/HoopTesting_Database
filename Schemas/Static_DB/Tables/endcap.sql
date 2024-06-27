@@ -10,6 +10,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
 CHARACTER SET latin1,
 COLLATE latin1_swedish_ci,
+COMMENT = 'End Cap related to a Standard',
 ROW_FORMAT = DYNAMIC;
 
 ALTER TABLE `endcap` 

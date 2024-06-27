@@ -11,6 +11,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_0900_ai_ci,
+COMMENT = 'Related Materials to a Standard',
 ROW_FORMAT = DYNAMIC;
 
 ALTER TABLE `material_has_standard` 

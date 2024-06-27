@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|25/6/2024 00:48:45|
-|Last Modified|24/6/2024 16:36:35|
+|Last Modified|1/1/0001 00:00:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -94,4 +94,4 @@ COMMENT = 'Material of Hoop';
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

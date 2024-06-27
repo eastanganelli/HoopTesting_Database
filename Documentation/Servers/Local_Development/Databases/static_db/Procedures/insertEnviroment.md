@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|26/6/2024 20:38:57|
+|Last Modified|26/6/2024 20:38:57|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -25,13 +25,12 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |---|---|---|---|---|
 |idStandard|INT||11||
 |insideFluid|VARCHAR|30|||
-|outsideFluid|VARCHAR|30|||
 
 ## <a name="#SqlScript"></a>SQL Script
 ```SQL
 CREATE
 DEFINER = 'root'
-PROCEDURE insertEnviroment (IN idStandard int UNSIGNED, IN insideFluid varchar(30), IN outsideFluid varchar(30))
+PROCEDURE insertEnviroment (IN idStandard int UNSIGNED, IN insideFluid varchar(30))
 DETERMINISTIC
 BEGIN
 
@@ -41,21 +40,21 @@ BEGIN
     COUNT(*) INTO elements
   FROM enviroment e
   WHERE e.standard = idStandard
-  AND e.inside LIKE insideFluid
-  AND e.outside LIKE outsideFluid;
+  AND e.inside LIKE insideFluid;
+  #AND e.outside LIKE outsideFluid;
 
   IF elements = 0 THEN
-    INSERT HIGH_PRIORITY INTO enviroment (standard, inside, outside)
-      VALUES (idStandard, insideFluid, outsideFluid);
+    INSERT HIGH_PRIORITY INTO enviroment (standard, inside)
+      VALUES (idStandard, insideFluid);
 
     SELECT
       e.id AS `key`,
-      e.inside AS `insideFluid`,
-      e.outside AS `outsideFluid`
+      e.inside AS `insideFluid`
+    #      e.outside AS `outsideFluid`
     FROM enviroment e
     WHERE e.standard = idStandard
-    AND e.inside LIKE insideFluid
-    AND e.outside LIKE outsideFluid;
+    AND e.inside LIKE insideFluid;
+  #    AND e.outside LIKE outsideFluid;
 
   ELSE
     SELECT
@@ -76,4 +75,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) test_type
 
 ## <a name="#Description"></a>Description
-> 
+> Test Type by Standard
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:02|
-|Last Modified|24/6/2024 23:38:54|
+|Created|26/6/2024 20:21:00|
+|Last Modified|1/1/0001 00:00:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -63,7 +63,8 @@ CREATE TABLE test_type (
 )
 ENGINE = INNODB,
 CHARACTER SET utf8mb4,
-COLLATE utf8mb4_0900_ai_ci;
+COLLATE utf8mb4_0900_ai_ci,
+COMMENT = 'Test Type by Standard';
 
 ALTER TABLE test_type
 ADD CONSTRAINT FK_test_type_standard_id FOREIGN KEY (standard)
@@ -85,4 +86,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

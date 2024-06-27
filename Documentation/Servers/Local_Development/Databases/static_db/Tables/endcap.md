@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) endcap
 
 ## <a name="#Description"></a>Description
-> 
+> End Cap related to a Standard
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:02|
-|Last Modified|24/6/2024 18:35:57|
+|Created|26/6/2024 20:21:13|
+|Last Modified|1/1/0001 00:00:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -64,7 +64,8 @@ CREATE TABLE endcap (
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
 CHARACTER SET latin1,
-COLLATE latin1_swedish_ci;
+COLLATE latin1_swedish_ci,
+COMMENT = 'End Cap related to a Standard';
 
 ALTER TABLE endcap
 ADD CONSTRAINT FK_endcap_standard_id FOREIGN KEY (standard)
@@ -87,4 +88,4 @@ REFERENCES standard (id) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

@@ -12,7 +12,7 @@ AUTO_INCREMENT = 22,
 AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
-COMMENT = 'Specification of material',
+COMMENT = 'Specification of a Material',
 ROW_FORMAT = DYNAMIC;
 
 ALTER TABLE `specification` 

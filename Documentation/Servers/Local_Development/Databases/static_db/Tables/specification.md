@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) specification
 
 ## <a name="#Description"></a>Description
-> Specification of material
+> Specification of a Material
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,8 +27,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|25/6/2024 00:48:11|
-|Last Modified|24/6/2024 23:46:56|
+|Created|26/6/2024 20:20:26|
+|Last Modified|1/1/0001 00:00:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -72,7 +72,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
-COMMENT = 'Specification of material';
+COMMENT = 'Specification of a Material';
 
 ALTER TABLE specification
 ADD CONSTRAINT FK_specification_material_id FOREIGN KEY (material)
@@ -100,4 +100,4 @@ REFERENCES material (id) ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

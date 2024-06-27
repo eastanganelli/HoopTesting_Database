@@ -7,9 +7,9 @@
   PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_0900_ai_ci,
+COMMENT = 'Test Type by Standard',
 ROW_FORMAT = DYNAMIC;
 
 ALTER TABLE `test_type` 

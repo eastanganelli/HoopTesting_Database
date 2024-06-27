@@ -16,8 +16,8 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Definer|root|
 |SQL Mode|NO_AUTO_VALUE_ON_ZERO|
 |Language|SQL|
-|Created|11/6/2024 11:06:02|
-|Last Modified|11/6/2024 11:06:02|
+|Created|26/6/2024 19:08:54|
+|Last Modified|26/6/2024 19:08:54|
 
 
 ## <a name="#Parameters"></a>Parameters
@@ -35,8 +35,8 @@ BEGIN
 
   SELECT
     ehs.id,
-    ehs.inside,
-    ehs.outside
+    ehs.inside#,
+  #ehs.outside
   FROM enviroment ehs
   WHERE ehs.standard = idStandard;
 
@@ -53,4 +53,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

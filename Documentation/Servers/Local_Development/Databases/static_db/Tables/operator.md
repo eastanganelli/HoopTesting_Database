@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) operator
 
 ## <a name="#Description"></a>Description
-> 
+> Test Operator
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,7 +27,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:03|
+|Created|26/6/2024 20:20:18|
 |Last Modified|1/1/0001 00:00:00|
 
 
@@ -60,7 +60,8 @@ CREATE TABLE operator (
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
 CHARACTER SET utf8mb4,
-COLLATE utf8mb4_0900_ai_ci;
+COLLATE utf8mb4_0900_ai_ci,
+COMMENT = 'Test Operator';
 ```
 
 ## <a name="#DependsOn"></a>Depends On
@@ -77,4 +78,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

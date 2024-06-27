@@ -6,7 +6,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 # ![logo](../../../../../Images/table64.svg) specification_configuration
 
 ## <a name="#Description"></a>Description
-> Conditional period by Specification
+> Configuration by Specification
 ## <a name="#Properties"></a>Properties
 |Name|Value|
 |---|---|
@@ -27,7 +27,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Persistent Statistics|DEFAULT|
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
-|Created|11/6/2024 11:06:02|
+|Created|26/6/2024 20:20:50|
 |Last Modified|1/1/0001 00:00:00|
 
 
@@ -69,7 +69,7 @@ ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
-COMMENT = 'Conditional period by Specification';
+COMMENT = 'Configuration by Specification';
 
 ALTER TABLE specification_configuration
 ADD INDEX FK_period_by_material_material_id (specification);
@@ -95,4 +95,4 @@ REFERENCES specification (id) ON UPDATE CASCADE;
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|

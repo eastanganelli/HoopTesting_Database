@@ -11,7 +11,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Name|Value|
 |---|---|
 |Engine|InnoDB|
-|Auto Increment|7|
+|Auto Increment|8|
 |Average Row Length|16384|
 |Charset|utf8mb4|
 |Collation|utf8mb4_general_ci|
@@ -28,7 +28,7 @@ Project>[Servers](../../../../Servers.md)>[Local_Development](../../../Local_Dev
 |Auto Recalculate Statistics|DEFAULT|
 |Sample Pages|0|
 |Created|11/6/2024 11:06:02|
-|Last Modified|24/6/2024 14:14:44|
+|Last Modified|26/6/2024 20:18:00|
 
 
 ## <a name="#Columns"></a>Columns
@@ -92,4 +92,4 @@ No items found
 
 ||||
 |---|---|---|
-|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 25/06/2024|
+|Author: Ezequiel Augusto Stanganelli|Copyright © All Rights Reserved|Created: 26/06/2024|
