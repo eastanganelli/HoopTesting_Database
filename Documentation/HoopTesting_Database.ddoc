@@ -18,7 +18,7 @@
     <Header>Hoop Testing</Header>
     <Title>Hoop Testing - Database Documentation</Title>
     <TitleImage>D:\ezequ\Projects\HoopTesting_System\sources\icons\System\HoopTesting_System.png</TitleImage>
-    <Style>bootstrap/Default Dark.css</Style>
+    <Style>bootstrap/Default.css</Style>
     <FileFormat>Html</FileFormat>
     <OpenAfterGeneration>false</OpenAfterGeneration>
     <AppendTimestamp>false</AppendTimestamp>
