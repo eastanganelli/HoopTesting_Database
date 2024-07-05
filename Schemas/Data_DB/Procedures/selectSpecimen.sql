@@ -11,6 +11,8 @@ BEGIN
   SELECT
     s.id AS `idSpecimen`,
     s.sample AS `idSample`,
+    s.targetPressure AS `pressure`,
+    s.targetTemperature AS `temperature`,
     s.enviroment AS `enviroment`,
     s.testName AS `testName`,
     s.operator AS `operator`,
@@ -24,3 +26,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE selectSpecimen TO 'databaseManager'@'%';

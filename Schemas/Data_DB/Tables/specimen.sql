@@ -1,7 +1,9 @@
 ﻿CREATE TABLE `specimen` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `sample` INT UNSIGNED NOT NULL,
-  `operator` VARCHAR(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'STEL S.A.',
+  `targetPressure` INT NOT NULL,
+  `targetTemperature` INT NOT NULL,
+  `operator` VARCHAR(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
   `enviroment` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
   `testName` VARCHAR(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',
   `endCap` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '',

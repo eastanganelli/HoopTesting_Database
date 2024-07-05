@@ -4,11 +4,11 @@ SET @saved_sql_mode = @@sql_mode
 $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
-CREATE PROCEDURE `insertSpecimen`(IN idSample int UNSIGNED, IN operatorName varchar(40), IN enviromentIn varchar(20), IN testNameIn varchar(120), IN endCapIn varchar(10))
+CREATE PROCEDURE `insertSpecimen`(IN idSample int UNSIGNED, IN targetPressureIn int, IN targetTempIn int, IN operatorName varchar(40), IN enviromentIn varchar(20), IN testNameIn varchar(120), IN endCapIn varchar(10))
 BEGIN
 
-  INSERT INTO specimen (sample, operator, enviroment, testName, endCap, createdAt, updatedAt)
-    VALUES (idSample, operatorName, enviromentIn, testNameIn, endCapIn, CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+  INSERT INTO specimen (sample, targetPressure, targetTemperature, operator, enviroment, testName, endCap, createdAt, updatedAt)
+    VALUES (idSample, targetPressureIn, targetTempIn, operatorName, enviromentIn, testNameIn, endCapIn, CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
 
   SELECT
     ts.id AS `idSpecimen`
@@ -22,3 +22,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertSpecimen TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertSpecimen TO 'databaseManager'@'%';

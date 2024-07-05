@@ -30,12 +30,6 @@ BEGIN
     sa.lentotal,
     'lengthFree',
     sa.lenfree,
-    'targetTemperature',
-    sa.targettemp,
-    'targetPressure',
-    sa.targetpressure,
-    'hoopStress',
-    ((sa.targettemp * (sa.diamreal - sa.wallthick)) / (10 * 2 * sa.wallthick)),
     'conditionalPeriod',
     sa.condPeriod) INTO @result
   FROM sample sa

@@ -10,8 +10,11 @@ BEGIN
 
   SELECT
     ts.id AS idSample,
-    ts.standard AS standard,
     ts.material AS material,
+    ts.specification AS specification,
+    ts.diamreal AS diameter,
+    ts.wallthick AS wallThickness,
+    ts.lenfree AS length,
     selectTestsSpecimens(ts.id) AS mySpecimens
   FROM sample ts;
 

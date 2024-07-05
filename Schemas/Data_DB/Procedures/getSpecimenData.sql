@@ -8,17 +8,18 @@ CREATE PROCEDURE `getSpecimenData`(IN mySpecimenID int UNSIGNED)
   DETERMINISTIC
 BEGIN
 
-  CREATE TEMPORARY TABLE IF NOT EXISTS myResult AS (SELECT
+  WITH myResult
+  AS
+  (SELECT
       td.id,
       td.pressure,
       td.temperature,
-      # td.createdAt,
       (TIMESTAMPDIFF(MICROSECOND, (SELECT
           td2.createdAt
         FROM data td2
         WHERE td2.specimen = mySpecimenID LIMIT 1), td.createdAt)) AS `difference`
     FROM data td
-    WHERE td.specimen = mySpecimenID);
+    WHERE td.specimen = mySpecimenID)
 
   SELECT
     ts.id AS `idTest`,
@@ -26,11 +27,9 @@ BEGIN
         JSON_ARRAYAGG(JSON_OBJECT('id', r.id, 'pressure', r.pressure, 'temperature', r.temperature, 'timekey', r.difference))
       FROM myResult r) AS `testData`
   FROM specimen ts
-    INNER JOIN sample ts1
-      ON ts.sample = ts1.id
+    INNER JOIN sample ss
+      ON ts.sample = ss.id
   WHERE ts.id = mySpecimenID;
-
-  DROP TEMPORARY TABLE IF EXISTS myResult;
 
 END
 $$

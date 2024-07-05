@@ -5,6 +5,7 @@ $$
 SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
 CREATE PROCEDURE `deleteTest`(IN idSpecimen int UNSIGNED)
+  COMMENT 'Delete Test by ID'
 BEGIN
 
   DELETE LOW_PRIORITY QUICK

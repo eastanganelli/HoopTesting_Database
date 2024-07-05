@@ -18,9 +18,7 @@ BEGIN
     s.wallthick AS `wallthickness`,
     s.lenfree AS `lenfree`,
     s.lentotal AS `lentotal`,
-    s.condPeriod AS `condPeriod`,
-    s.targettemp AS `targettemp`,
-    s.targetpressure AS `targetpressure`
+    s.condPeriod AS `condPeriod`
   FROM sample s
   WHERE s.id = idSample;
 
@@ -30,3 +28,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE selectSample TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE selectSample TO 'databaseManager'@'%';

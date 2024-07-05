@@ -6,6 +6,7 @@ SET @@sql_mode = 'NO_AUTO_VALUE_ON_ZERO'
 $$
 CREATE PROCEDURE `countSpecimens`(IN idSample int UNSIGNED)
   DETERMINISTIC
+  COMMENT 'Count Specimens by an Sample ID'
 BEGIN
 
   SELECT
@@ -19,3 +20,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE countSpecimens TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE countSpecimens TO 'databaseManager'@'%';

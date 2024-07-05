@@ -16,3 +16,4 @@ $$
 DELIMITER ;
 
 GRANT EXECUTE ON PROCEDURE insertData TO 'dataCollector'@'%';
+GRANT EXECUTE ON PROCEDURE insertData TO 'databaseManager'@'%';

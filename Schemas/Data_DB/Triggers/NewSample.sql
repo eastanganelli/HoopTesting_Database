@@ -22,9 +22,7 @@ BEGIN
   AND s.diamnom = NEW.diamnom
   AND s.lentotal = NEW.lentotal
   AND s.lenfree = NEW.lenfree
-  AND s.wallthick = NEW.wallthick
-  AND s.targettemp = new.targettemp
-  AND s.targetpressure = NEW.targetpressure;
+  AND s.wallthick = NEW.wallthick;
 
   IF row_id IS NOT NULL THEN
     SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = row_id;
