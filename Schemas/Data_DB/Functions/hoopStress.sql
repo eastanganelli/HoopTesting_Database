@@ -12,7 +12,7 @@ set @hoopResult = 0;
     FROM sample s
     WHERE s.id = idSample;
 
-RETURN hoopResult;
+RETURN @hoopResult;
 END
 $$
 
